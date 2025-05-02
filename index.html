@@ -56,32 +56,6 @@
       <div class="hero-image"></div>
     </section>
 
-    <!-- Impact Stats -->
-    <section class="section-white">
-      <div class="grid">
-        <div class="impact-box">
-          <img src="icons/users.svg" alt="Users" />
-          <h3>Students Helped</h3>
-          <p>5,000</p>
-        </div>
-        <div class="impact-box">
-          <img src="icons/book.svg" alt="Book" />
-          <h3>Programs Offered</h3>
-          <p>24</p>
-        </div>
-        <div class="impact-box">
-          <img src="icons/calendar.svg" alt="Calendar" />
-          <h3>Events Hosted</h3>
-          <p>120</p>
-        </div>
-        <div class="impact-box">
-          <img src="icons/heart.svg" alt="Heart" />
-          <h3>Volunteer Hours</h3>
-          <p>15,000</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Programs -->
     <section class="section-gray">
       <div class="text-center">
@@ -158,20 +132,24 @@
       </div>
     </section>
 
-    <!-- Partners -->
-    <section class="section-white">
-      <div class="text-center">
-        <h2>Our Partners</h2>
-        <p>We're proud to collaborate with these organizations to expand our impact.</p>
-      </div>
-      <div class="partners">
-        <img src="logos/partner1.svg" alt="Partner 1" />
-        <img src="logos/partner2.svg" alt="Partner 2" />
-        <img src="logos/partner3.svg" alt="Partner 3" />
-        <img src="logos/partner4.svg" alt="Partner 4" />
-        <img src="logos/partner5.svg" alt="Partner 5" />
-      </div>
-    </section>
+<!-- Partners Carousel -->
+<section class="section-white partners-carousel-section">
+  <div class="text-center">
+    <h2>Our Partners</h2>
+    <p>We're proud to collaborate with these organizations to expand our impact.</p>
+  </div>
+  <div class="carousel-container">
+    <button class="carousel-btn left" onclick="scrollCarousel(-1)">‹</button>
+    <div class="carousel-track" id="partnersCarousel">
+      <div class="carousel-item"><img src="assests\Maranyundo+Logo+1.jpg" alt="Partner 1 Logo" /></div>
+      <div class="carousel-item"><img src="assests\heptadev.PNG" alt="Partner 2 Logo" /></div>
+      <div class="carousel-item"><img src="assests\kpc logo.png" alt="Partner 3 Logo" /></div>
+      <div class="carousel-item"><img src="assests\idebate.png" alt="Partner 4 Logo" /></div>
+      <div class="carousel-item"><img src="assests\alx l.jpg" alt="Partner 5 Logo" /></div>
+    </div>
+    <button class="carousel-btn right" onclick="scrollCarousel(1)">›</button>
+  </div>
+</section>
 
   </div>
 </body>

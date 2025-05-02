@@ -50,4 +50,17 @@ function toggleMenu() {
       });
     });
   });
-   
+  function scrollCarousel(direction) {
+    const track = document.getElementById("partnersCarousel");
+    const scrollAmount = 180; // Adjust based on item width + gap
+    track.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+  
+  // Optional: Auto-scroll
+  setInterval(() => {
+    scrollCarousel(1);
+  }, 5000);
+     

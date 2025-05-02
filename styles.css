@@ -406,4 +406,73 @@ body {
     display: none !important;
   }
 }
-   
+.partners-carousel-section {
+  padding: 60px 20px;
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 40px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.carousel-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.carousel-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+ 

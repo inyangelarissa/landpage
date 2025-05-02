@@ -376,6 +376,99 @@ body {
   }
 }
 
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 2rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  background-color: #f1f5f9;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.tab:hover {
+  background-color: #e2e8f0;
+}
+
+.tab.active {
+  background-color: #fff;
+  border: 2px solid #e2e8f0;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.content-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.image-placeholder {
+  width: 400px;
+  height: 400px;
+  background-color: #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder::before {
+  content: "📷";
+  font-size: 3rem;
+  color: #94a3b8;
+}
+
+.content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.content ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.button-green {
+  background-color: #22c55e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
               </style>
             </head>
             <body>
@@ -387,156 +480,144 @@ body {
                   </p>
                 </div>
               </section>
-          
-              <section class="py-16 bg-white">
-                <div class="container">
-                  <h2 class="section-title mb-4">Skills Development</h2>
-                  <p class="text-gray-700 mb-6">
-                    Our skills development programs equip students with practical, in-demand skills for today's job market and future careers.
-                  </p>
-                  <div class="grid grid-2 mb-6">
-                    <div>
-                      <ul class="mb-6">
-                        <li>Hands-on workshops led by industry professionals</li>
-                        <li>Technical and soft skills training</li>
-                        <li>Project-based learning opportunities</li>
-                      </ul>
-                      <button class="btn btn-blue">Explore Skills Programs</button>
-                    </div>
-                    <img src="/placeholder.svg?height=400&width=600&text=Skills+Workshop" alt="Students in a skills workshop" />
-                  </div>
-          
-                  <div class="grid grid-3">
-                    <div class="card">
-                      <div class="card-title">Digital Literacy</div>
-                      <div class="card-content">
-                        Essential computer skills, online research, and digital tools mastery.
-                      </div>
-                      <div class="card-footer">
-                        <button class="btn btn-blue">Learn More</button>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-title">Career Readiness</div>
-                      <div class="card-content">
-                        Resume building, interview preparation, and professional networking.
-                      </div>
-                      <div class="card-footer">
-                        <button class="btn btn-blue">Learn More</button>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-title">Technical Training</div>
-                      <div class="card-content">
-                        Programming, design, and other technical skills for the modern workplace.
-                      </div>
-                      <div class="card-footer">
-                        <button class="btn btn-blue">Learn More</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-          
-              <section class="py-16 bg-white">
-                <div class="container">
-                  <h2 class="section-title mb-4">Mentorship Programs</h2>
-                  <p class="text-gray-700 mb-6">
-                    Connect with experienced mentors who provide personalized guidance to help you achieve your academic and career goals.
-                  </p>
-                  <div class="grid grid-2 mb-6">
-                    <img src="/placeholder.svg?height=400&width=600&text=Mentorship+Program" alt="Mentor and student meeting" />
-                    <div>
-                      <ul class="mb-6">
-                        <li>One-on-one mentorship with industry professionals</li>
-                        <li>Group mentoring sessions and networking events</li>
-                        <li>Peer mentorship opportunities</li>
-                      </ul>
-                      <button class="btn btn-green">Find a Mentor</button>
-                    </div>
-                  </div>
-          
-                  <div class="grid grid-3">
-                    <div class="card">
-                      <div class="card-title">Career Mentorship</div>
-                      <div class="card-content">
-                        Guidance from professionals in your desired career field.
-                      </div>
-                      <div class="card-footer">
-                        <button class="btn btn-green">Learn More</button>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-title">Academic Mentorship</div>
-                      <div class="card-content">
-                        Support for academic challenges and educational planning.
-                      </div>
-                      <div class="card-footer">
-                        <button class="btn btn-green">Learn More</button>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-title">Life Skills Mentorship</div>
-                      <div class="card-content">
-                        Guidance on personal development and life challenges.
-                      </div>
-                      <div class="card-footer">
-                        <button class="btn btn-green">Learn More</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-          
-              <section class="py-16 bg-white">
-                <div class="container">
-                  <h2 class="section-title mb-4">Support Services</h2>
-                  <p class="text-gray-700 mb-6">
-                    Specialized resources and support for all students, with dedicated programs for disabled students and young mothers.
-                  </p>
-                  <div class="grid grid-2 mb-6">
-                    <div>
-                      <ul class="mb-6">
-                        <li>Accessibility resources and accommodations</li>
-                        <li>Childcare assistance for student parents</li>
-                        <li>Mental health and wellness resources</li>
-                      </ul>
-                      <button class="btn btn-yellow">Access Support Services</button>
-                    </div>
-                    <img src="/placeholder.svg?height=400&width=600&text=Support+Services" alt="Support services for students" />
-                  </div>
-          
-                  <div class="grid grid-3">
-                    <div class="card">
-                      <div class="card-title">Accessibility Services</div>
-                      <div class="card-content">
-                        Resources and accommodations for students with disabilities.
-                      </div>
-                      <div class="card-footer">
-                        <button class="btn btn-yellow">Learn More</button>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-title">Parent Support</div>
-                      <div class="card-content">
-                        Resources for student parents, including childcare assistance.
-                      </div>
-                      <div class="card-footer">
-                        <button class="btn btn-yellow">Learn More</button>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-title">Wellness Resources</div>
-                      <div class="card-content">
-                        Mental health support and wellness programs for all students.
-                      </div>
-                      <div class="card-footer">
-                        <button class="btn btn-yellow">Learn More</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+           
+
+  <section class="tabs-section">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('skills')">Skills Development</button>
+      <button class="tab" onclick="switchTab('mentorship')">Mentorship</button>
+      <button class="tab" onclick="switchTab('support')">Support Services</button>
+    </div>
+    <section class="py-16 bg-white">
+    <div class="tab-content" id="skills">
+      <div class="container">
+        <h2 class="section-title mb-4">Skills Development</h2>
+        <p class="text-gray-700 mb-6">
+          Our skills development programs equip students with practical, in-demand skills for today's job market and future careers.
+        </p>
+        <div class="grid grid-2 mb-6">
+          <div>
+            <ul class="mb-6">
+              <li>Hands-on workshops led by industry professionals</li>
+              <li>Technical and soft skills training</li>
+              <li>Project-based learning opportunities</li>
+            </ul>
+            <button class="btn btn-blue">Explore Skills Programs</button>
+          </div>
+          <img src="/placeholder.svg?height=400&width=600&text=Skills+Workshop" alt="Students in a skills workshop" />
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-title">Digital Literacy</div>
+            <div class="card-content">
+              Essential computer skills, online research, and digital tools mastery.
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-blue">Learn More</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Career Readiness</div>
+            <div class="card-content">
+              Resume building, interview preparation, and professional networking.
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-blue">Learn More</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Technical Training</div>
+            <div class="card-content">
+              Programming, design, and other technical skills for the modern workplace.
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-blue">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+
+
+
+<section>
+    <div class="tab-content active" id="mentorship">
+      <div class="content-grid">
+        <div class="image-placeholder"></div>
+        <div class="content">
+          <h2>Mentorship Programs</h2>
+          <p>Connect with experienced mentors who provide personalized guidance to help you achieve your academic and career goals.</p>
+          <ul>
+            <li>✅ One-on-one mentorship with industry professionals</li>
+            <li>✅ Group mentoring sessions and networking events</li>
+            <li>✅ Peer mentorship opportunities</li>
+          </ul>
+          <a href="#" class="button-green">Find a Mentor</a>
+        </div>
+      </div>
+    </div>
+  </section>  
+  
+  
+
+
+      <section class="py-16 bg-white">
+        <div class="tab-content active" id="support"></div>
+        <div class="container">
+          <h2 class="section-title mb-4">Support Services</h2>
+          <p class="text-gray-700 mb-6">
+            Specialized resources and support for all students, with dedicated programs for disabled students and young mothers.
+          </p>
+          <div class="grid grid-2 mb-6">
+            <div>
+              <ul class="mb-6">
+                <li>Accessibility resources and accommodations</li>
+                <li>Childcare assistance for student parents</li>
+                <li>Mental health and wellness resources</li>
+              </ul>
+              <button class="btn btn-yellow">Access Support Services</button>
+            </div>
+            <img src="/placeholder.svg?height=400&width=600&text=Support+Services" alt="Support services for students" />
+          </div>
+  
+          <div class="grid grid-3">
+            <div class="card">
+              <div class="card-title">Accessibility Services</div>
+              <div class="card-content">
+                Resources and accommodations for students with disabilities.
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-yellow">Learn More</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">Parent Support</div>
+              <div class="card-content">
+                Resources for student parents, including childcare assistance.
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-yellow">Learn More</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">Wellness Resources</div>
+              <div class="card-content">
+                Mental health support and wellness programs for all students.
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-yellow">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <script src="program.js"></script>
               <style>
                 body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
                 .section { padding: 4rem 1rem; }
