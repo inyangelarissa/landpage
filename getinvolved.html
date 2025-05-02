@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved</title>
+</head>
+<body>
+      <header class="header">
+        <div class="header-container">
+          <!-- Logo -->
+          <a href="/" class="logo">StudentInitiative</a>
+      
+          <!-- Desktop Navigation -->
+          <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="programs.html" class="nav-link">Programs</a>
+            <a href="getinvolved.html" class="nav-link">Get Involved</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="/get-involved?tab=donate" class="donate-btn">Donate</a>
+          </nav>
+      
+          <!-- Mobile Toggle -->
+          <button class="menu-toggle" onclick="toggleMenu()">
+            <img id="menu-icon" src="menu.svg" alt="Menu" />
+          </button>
+        </div>
+      
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="mobile-nav">
+          <a href="index.html" class="mobile-link">Home</a>
+          <a href="about.html" class="mobile-link">About Us</a>
+          <a href="programs.html" class="mobile-link">Programs</a>
+          <a href="getinvolved.html" class="mobile-link">Get Involved</a>
+          <a href="contact.html" class="mobile-link">Contact</a>
+          <a href="/get-involved?tab=donate" class="donate-btn full">Donate</a>
+        </div>
+      </header>
+      
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      </head>
+      <body class="flex flex-col min-h-screen">
+      
+        <!-- Hero Section -->
+        <section class="bg-green-600 text-white py-20">
+          <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl">
+              <h1 class="text-4xl md:text-5xl font-bold mb-6">Get Involved</h1>
+              <p class="text-xl mb-8">
+                Join our community of volunteers, mentors, and donors who are making a difference in students' lives.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-semibold py-3 px-6 rounded-lg text-lg">
+                  Donate Now
+                </button>
+                <button class="border border-white text-white hover:bg-white hover:text-green-600 font-semibold py-3 px-6 rounded-lg text-lg">
+                  Become a Volunteer
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+          <!-- Impact Stories -->
+          <section class="impact-section">
+            <div class="container">
+              <div class="text-center mb-12">
+                <h2 class="section-title">The Impact of Your Support</h2>
+                <p class="section-subtitle">See how donations, volunteers, and mentors have changed students' lives.</p>
+              </div>
+        
+              <div class="card-grid">
+                <div class="card text-center">
+                  <div class="icon blue">💰</div>
+                  <h3>Scholarship Fund</h3>
+                  <p>Donations to our scholarship fund have helped 50+ students continue their education despite financial barriers.</p>
+                  <div class="stat-block">
+                    <p class="stat-value blue">$250,000</p>
+                    <p class="stat-label">in scholarships awarded</p>
+                  </div>
+                </div>
+        
+                <div class="card text-center">
+                  <div class="icon green">❤️</div>
+                  <h3>Volunteer Hours</h3>
+                  <p>Our dedicated volunteers have contributed thousands of hours to support student success and community events.</p>
+                  <div class="stat-block">
+                    <p class="stat-value green">15,000+</p>
+                    <p class="stat-label">volunteer hours</p>
+                  </div>
+                </div>
+        
+                <div class="card text-center">
+                  <div class="icon yellow">👥</div>
+                  <h3>Mentorship Impact</h3>
+                  <p>Students paired with mentors show significant improvements in academic performance and career readiness.</p>
+                  <div class="stat-block">
+                    <p class="stat-value yellow">85%</p>
+                    <p class="stat-label">graduation rate for mentored students</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+          <!-- Corporate Partners -->
+          <section class="partners-section">
+            <div class="container">
+              <div class="text-center mb-12">
+                <h2 class="section-title">Corporate Partnership Opportunities</h2>
+                <p class="section-subtitle">Partner with us to make a meaningful impact while achieving your corporate social responsibility goals.</p>
+              </div>
+        
+              <div class="card-grid">
+                <div class="card">
+                  <h3>Sponsorship</h3>
+                  <p>Sponsor a program, event, or scholarship to gain visibility while supporting our mission.</p>
+                  <h4>Benefits:</h4>
+                  <ul class="benefits-list">
+                    <li>Brand visibility at events</li>
+                    <li>Recognition in publications</li>
+                    <li>Employee engagement opportunities</li>
+                  </ul>
+                  <button class="outline-btn">Learn More</button>
+                </div>
+        
+                <div class="card">
+                  <h3>Employee Volunteering</h3>
+                  <p>Engage your employees in meaningful volunteer opportunities that develop skills and team cohesion.</p>
+                  <h4>Benefits:</h4>
+                  <ul class="benefits-list">
+                    <li>Team building</li>
+                    <li>Skills development</li>
+                    <li>Community impact</li>
+                  </ul>
+                  <button class="outline-btn">Learn More</button>
+                </div>
+        
+                <div class="card">
+                  <h3>In-Kind Support</h3>
+                  <p>Provide products, services, or expertise to support our programs and operations.</p>
+                  <h4>Benefits:</h4>
+                  <ul class="benefits-list">
+                    <li>Resource optimization</li>
+                    <li>Practical support</li>
+                    <li>Sustainable partnership</li>
+                  </ul>
+                  <button class="outline-btn">Learn More</button>
+                </div>
+              </div>
+        
+              <div class="text-center mt-12">
+                <p class="contact-msg">Interested in becoming a corporate partner? Contact our partnership team to discuss opportunities.</p>
+                <button class="primary-btn">Contact Partnership Team</button>
+              </div>
+            </div>
+          </section>
+            <style>
+              body {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+                color: #333;
+              }
+          
+              .container {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 0 1rem;
+              }
+          
+              .text-center {
+                text-align: center;
+              }
+          
+              .mb-12 {
+                margin-bottom: 3rem;
+              }
+          
+              .section-title {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #1f2937;
+                margin-bottom: 1rem;
+              }
+          
+              .section-subtitle {
+                font-size: 1.2rem;
+                color: #4b5563;
+                max-width: 700px;
+                margin: 0 auto;
+              }
+          
+              .impact-section {
+                padding: 4rem 0;
+                background-color: #eff6ff;
+              }
+          
+              .partners-section {
+                padding: 4rem 0;
+                background-color: white;
+              }
+          
+              .card-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2rem;
+              }
+          
+              @media (min-width: 768px) {
+                .card-grid {
+                  grid-template-columns: repeat(3, 1fr);
+                }
+              }
+          
+              .card {
+                background-color: #fff;
+                border-radius: 1rem;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                padding: 2rem;
+              }
+          
+              .card h3 {
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+              }
+          
+              .card p {
+                margin-bottom: 1.5rem;
+              }
+          
+              .card h4 {
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+              }
+          
+              .benefits-list {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 1.5rem;
+              }
+          
+              .benefits-list li {
+                margin-bottom: 0.5rem;
+                padding-left: 1.2rem;
+                position: relative;
+              }
+          
+              .benefits-list li::before {
+                content: "•";
+                color: #10b981;
+                position: absolute;
+                left: 0;
+              }
+          
+              .icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+              }
+          
+              .icon.blue {
+                color: #2563eb;
+              }
+          
+              .icon.green {
+                color: #10b981;
+              }
+          
+              .icon.yellow {
+                color: #facc15;
+              }
+          
+              .stat-block {
+                margin-top: 1rem;
+              }
+          
+              .stat-value {
+                font-size: 2rem;
+                font-weight: bold;
+              }
+          
+              .stat-label {
+                font-size: 0.875rem;
+                color: #6b7280;
+              }
+          
+              .stat-value.blue {
+                color: #2563eb;
+              }
+          
+              .stat-value.green {
+                color: #10b981;
+              }
+          
+              .stat-value.yellow {
+                color: #facc15;
+              }
+          
+              .outline-btn {
+                padding: 0.5rem 1rem;
+                border: 2px solid #10b981;
+                background: transparent;
+                color: #10b981;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                width: 100%;
+                transition: all 0.3s;
+              }
+          
+              .outline-btn:hover {
+                background-color: #10b981;
+                color: white;
+              }
+          
+              .primary-btn {
+                background-color: #2563eb;
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border: none;
+                border-radius: 0.5rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background-color 0.3s;
+              }
+          
+              .primary-btn:hover {
+                background-color: #1d4ed8;
+              }
+          
+              .contact-msg {
+                font-size: 1rem;
+                color: #374151;
+                margin-bottom: 1.5rem;
+              }
+            </style> 
+
+  <link rel="stylesheet" href="getinvolved.css" />
+
+
+  <section class="section-white">
+    <div class="container">
+      <div class="tabs">
+        <div class="tabs-header">
+          <button class="tab-button active">Donate</button>
+          <button class="tab-button">Volunteer</button>
+          <button class="tab-button">Become a Mentor</button>
+        </div>
+
+        <div class="tab-content" id="donate-tab">
+          <div class="donation-grid">
+            <div class="donation-info">
+              <h2 class="section-title">Support Our Mission</h2>
+              <p class="section-subtext">
+                Your donation helps us provide essential resources, programs, and support services to students in need.
+              </p>
+              <ul class="donation-list">
+                <li><span class="icon">$</span> Fund scholarships for deserving students</li>
+                <li><span class="icon">$</span> Support accessibility resources and accommodations</li>
+                <li><span class="icon">$</span> Help expand our programs to reach more students</li>
+              </ul>
+            </div>
+
+            <div class="donation-form-card">
+              <h3 class="form-title">Make a Donation</h3>
+              <form>
+                <label for="donation-amount">Donation Amount</label>
+                <input type="text" id="donation-amount" placeholder="$100" />
+
+                <div class="form-row">
+                  <div>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" placeholder="First Name" />
+                  </div>
+                  <div>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Last Name" />
+                  </div>
+                </div>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email Address" />
+
+                <label for="donation-frequency">Donation Frequency</label>
+                <select id="donation-frequency">
+                  <option value="">Select frequency</option>
+                  <option value="one-time">One-time</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="quarterly">Quarterly</option>
+                  <option value="annually">Annually</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Donate Now</button>
+
+                <p class="disclaimer">
+                  All donations are tax-deductible. You will receive a receipt for your records.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <!-- Other Ways to Give -->
+    <div class="bg-light-blue box mt">
+      <h3 class="title center">Other Ways to Give</h3>
+      <div class="grid-3 mt">
+        <div class="card">
+          <div class="card-header">
+            <div class="icon">$</div>
+            <h4>Corporate Sponsorship</h4>
+          </div>
+          <p>Partner with us to support our mission while gaining visibility for your brand.</p>
+          <button class="outline-btn">Learn More →</button>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="icon">♥</div>
+            <h4>In-Kind Donations</h4>
+          </div>
+          <p>Donate equipment, supplies, or services to support our programs.</p>
+          <button class="outline-btn">Learn More →</button>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="icon">📅</div>
+            <h4>Planned Giving</h4>
+          </div>
+          <p>Include our initiative in your estate planning to create a lasting legacy.</p>
+          <button class="outline-btn">Learn More →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Volunteer Section -->
+    <div class="volunteer-section mt">
+      <div class="grid-2 gap">
+        <img src="https://via.placeholder.com/600x400?text=Volunteer+Opportunities" alt="Volunteers" class="img"/>
+        <div>
+          <h2 class="title">Volunteer Opportunities</h2>
+          <p>Share your time and talents to make a difference in students' lives. We have various volunteer opportunities to match your skills and interests.</p>
+          <ul class="list">
+            <li><span class="bullet">👥</span>Event volunteers for workshops and community gatherings</li>
+            <li><span class="bullet">👥</span>Administrative support and program coordination</li>
+            <li><span class="bullet">👥</span>Skills-based volunteering in your area of expertise</li>
+          </ul>
+          <button class="green-btn">Apply to Volunteer</button>
+        </div>
+      </div>
+
+      <!-- Volunteer Application Form -->
+      <div class="form-box mt">
+        <h3 class="title center">Volunteer Application</h3>
+        <form>
+          <div class="grid-2">
+            <input type="text" placeholder="First Name" required />
+            <input type="text" placeholder="Last Name" required />
+          </div>
+          <div class="grid-2">
+            <input type="email" placeholder="Email Address" required />
+            <input type="tel" placeholder="Phone Number" required />
+          </div>
+          <select required>
+            <option value="">Select area of interest</option>
+            <option value="events">Event Support</option>
+            <option value="admin">Administrative Support</option>
+            <option value="teaching">Teaching & Workshops</option>
+            <option value="marketing">Marketing & Communications</option>
+            <option value="other">Other</option>
+          </select>
+          <select required>
+            <option value="">Select availability</option>
+            <option value="weekdays">Weekdays</option>
+            <option value="evenings">Evenings</option>
+            <option value="weekends">Weekends</option>
+            <option value="flexible">Flexible</option>
+          </select>
+          <textarea placeholder="Tell us about your motivation and what you hope to contribute..." rows="5"></textarea>
+          <button type="submit" class="green-btn full">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+    <section class="mentor-section">
+      <div class="container">
+        <div class="mentor-grid">
+          <div>
+            <h2 class="section-title">Become a Mentor</h2>
+            <p class="section-desc">
+              Share your knowledge and experience to guide students on their educational and career journeys. Your mentorship can change a student's life.
+            </p>
+            <ul class="mentor-list">
+              <li>
+                <div class="icon">👥</div>
+                <span>One-on-one mentorship with students in your field</span>
+              </li>
+              <li>
+                <div class="icon">👥</div>
+                <span>Group mentoring sessions and workshops</span>
+              </li>
+              <li>
+                <div class="icon">👥</div>
+                <span>Flexible time commitment options</span>
+              </li>
+            </ul>
+            <button class="btn-yellow">Apply to Be a Mentor</button>
+          </div>
+  
+          <div class="image-wrapper">
+            <img src="/placeholder.svg?height=400&width=600&text=Mentorship+Program" alt="Mentor working with student" />
+          </div>
+        </div>
+  
+        <div class="form-container">
+          <h3 class="form-title">Mentor Application</h3>
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="m-first-name">First Name</label>
+                <input type="text" id="m-first-name" placeholder="First Name" />
+              </div>
+              <div class="form-group">
+                <label for="m-last-name">Last Name</label>
+                <input type="text" id="m-last-name" placeholder="Last Name" />
+              </div>
+            </div>
+  
+            <div class="form-row">
+              <div class="form-group">
+                <label for="m-email">Email</label>
+                <input type="email" id="m-email" placeholder="Email Address" />
+              </div>
+              <div class="form-group">
+                <label for="m-phone">Phone</label>
+                <input type="text" id="m-phone" placeholder="Phone Number" />
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="m-profession">Professional Field</label>
+              <input type="text" id="m-profession" placeholder="Your profession or area of expertise" />
+            </div>
+  
+            <div class="form-group">
+              <label for="m-experience">Years of Experience</label>
+              <select id="m-experience">
+                <option>Select years of experience</option>
+                <option>1-3 years</option>
+                <option>4-7 years</option>
+                <option>8-12 years</option>
+                <option>13+ years</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <label for="m-availability">Availability</label>
+              <select id="m-availability">
+                <option>Select availability</option>
+                <option>1-2 hours per week</option>
+                <option>3-5 hours per week</option>
+                <option>6+ hours per week</option>
+                <option>Monthly sessions</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <label for="m-message">Why do you want to be a mentor?</label>
+              <textarea id="m-message" placeholder="Tell us about your motivation and what you hope to contribute..." rows="5"></textarea>
+            </div>
+  
+            <button type="submit" class="btn-yellow full">Submit Application</button>
+          </form>
+        </div>
+      </div>
+    </section>
+   
+        <!-- Impact Stories -->
+        <section class="section bg-light-blue">
+          <div class="container">
+            <div class="text-center mb-40">
+              <h2 class="section-title">The Impact of Your Support</h2>
+              <p class="section-subtitle">See how donations, volunteers, and mentors have changed students' lives.</p>
+            </div>
+      
+            <div class="grid-3">
+              <div class="card text-center">
+                <div class="icon blue">💰</div>
+                <h3 class="card-title">Scholarship Fund</h3>
+                <p class="card-desc">Donations to our scholarship fund have helped 50+ students continue their education despite financial barriers.</p>
+                <div class="stat">
+                  <p class="stat-value blue-text">$250,000</p>
+                  <p class="stat-label">in scholarships awarded</p>
+                </div>
+              </div>
+      
+              <div class="card text-center">
+                <div class="icon green">❤️</div>
+                <h3 class="card-title">Volunteer Hours</h3>
+                <p class="card-desc">Our dedicated volunteers have contributed thousands of hours to support student success and community events.</p>
+                <div class="stat">
+                  <p class="stat-value green-text">15,000+</p>
+                  <p class="stat-label">volunteer hours</p>
+                </div>
+              </div>
+      
+              <div class="card text-center">
+                <div class="icon yellow">👥</div>
+                <h3 class="card-title">Mentorship Impact</h3>
+                <p class="card-desc">Students paired with mentors show significant improvements in academic performance and career readiness.</p>
+                <div class="stat">
+                  <p class="stat-value yellow-text">85%</p>
+                  <p class="stat-label">graduation rate for mentored students</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        <!-- Corporate Partnership Opportunities -->
+        <section class="section bg-white">
+          <div class="container">
+            <div class="text-center mb-40">
+              <h2 class="section-title">Corporate Partnership Opportunities</h2>
+              <p class="section-subtitle">Partner with us to make a meaningful impact while achieving your corporate social responsibility goals.</p>
+            </div>
+      
+            <div class="grid-3">
+              <div class="card">
+                <h3 class="card-title">Sponsorship</h3>
+                <p class="card-desc">Sponsor a program, event, or scholarship to gain visibility while supporting our mission.</p>
+                <h4 class="benefits-title">Benefits:</h4>
+                <ul class="benefits-list">
+                  <li>Brand visibility at events</li>
+                  <li>Recognition in publications</li>
+                  <li>Employee engagement opportunities</li>
+                </ul>
+                <button class="btn-outline">Learn More</button>
+              </div>
+      
+              <div class="card">
+                <h3 class="card-title">Employee Volunteering</h3>
+                <p class="card-desc">Engage your employees in meaningful volunteer opportunities that develop skills and team cohesion.</p>
+                <h4 class="benefits-title">Benefits:</h4>
+                <ul class="benefits-list">
+                  <li>Team building</li>
+                  <li>Skills development</li>
+                  <li>Community impact</li>
+                </ul>
+                <button class="btn-outline">Learn More</button>
+              </div>
+      
+              <div class="card">
+                <h3 class="card-title">In-Kind Support</h3>
+                <p class="card-desc">Provide products, services, or expertise to support our programs and operations.</p>
+                <h4 class="benefits-title">Benefits:</h4>
+                <ul class="benefits-list">
+                  <li>Resource optimization</li>
+                  <li>Practical support</li>
+                  <li>Sustainable partnership</li>
+                </ul>
+                <button class="btn-outline">Learn More</button>
+              </div>
+            </div>
+      
+            <div class="text-center mt-40">
+              <p class="cta-text">Interested in becoming a corporate partner? Contact our partnership team to discuss opportunities.</p>
+              <button class="btn-primary">Contact Partnership Team</button>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer-container">
+            <!-- About -->
+            <div class="footer-section">
+              <h3>StudentInitiative</h3>
+              <p>Empowering students with skills, resources, and mentorship to live purposeful lives in an inclusive community.</p>
+              <div class="social-icons">
+                <a href="#" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" /></a>
+                <a href="#" aria-label="Twitter"><img src="twitter-icon.svg" alt="Twitter" /></a>
+                <a href="#" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" /></a>
+                <a href="#" aria-label="LinkedIn"><img src="linkedin-icon.svg" alt="LinkedIn" /></a>
+              </div>
+            </div>
+        
+            <!-- Quick Links -->
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/programs">Programs</a></li>
+                <li><a href="/get-involved">Get Involved</a></li>
+                <li><a href="/stories">Success Stories</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+              </ul>
+            </div>
+        
+            <!-- Contact -->
+            <div class="footer-section">
+              <h3>Contact Us</h3>
+              <ul>
+                <li><img src="map-pin.svg" alt="" /> 123 Education Street, Learning City, 12345</li>
+                <li><img src="phone.svg" alt="" /> (123) 456-7890</li>
+                <li><img src="mail.svg" alt="" /> info@studentinitiative.org</li>
+              </ul>
+            </div>
+        
+            <!-- Newsletter -->
+            <div class="footer-section">
+              <h3>Stay Updated</h3>
+              <p>Subscribe to our newsletter for the latest updates and events.</p>
+              <input type="email" placeholder="Your email address" />
+              <a href="/get-involved?tab=donate">
+                <button>Subscribe</button>
+              </a>
+            </div>
+          </div>
+        
+          <div class="footer-bottom">
+            <p>&copy; 2025 StudentInitiative. All rights reserved.</p>
+            <div class="footer-links">
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms of Service</a>
+              <a href="/accessibility">Accessibility</a>
+            </div>
+          </div>
+        </footer>
+        <script src="app.js"></script>
+</body>        
+</html>

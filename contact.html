@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <!-- Logo -->
+      <a href="/" class="logo">StudentInitiative</a>
+  
+      <!-- Desktop Navigation -->
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="programs.html" class="nav-link">Programs</a>
+        <a href="getinvolved.html" class="nav-link">Get Involved</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="/get-involved?tab=donate" class="donate-btn">Donate</a>
+      </nav>
+  
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <img id="menu-icon" src="menu.svg" alt="Menu" />
+      </button>
+    </div>
+  
+    <!-- Mobile Navigation -->
+    <div id="mobileMenu" class="mobile-nav">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link">About Us</a>
+      <a href="programs.html" class="mobile-link">Programs</a>
+      <a href="getinvolved.html" class="mobile-link">Get Involved</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+      <a href="/get-involved?tab=donate" class="donate-btn full">Donate</a>
+    </div>
+  </header>
+  <div class="contact-page">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have questions or want to learn more about our programs? We're here to help.</p>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="info">
+      <div class="container grid">
+
+        <!-- Left: Info Cards -->
+        <div class="left">
+
+          <h2>Get in Touch</h2>
+          <p>We'd love to hear from you! Whether you have questions about our programs, want to get involved, or need support, our team is ready to assist you.</p>
+
+          <div class="info-cards">
+
+            <div class="card">
+              <div class="icon blue"><span>📍</span></div>
+              <div>
+                <h3>Our Location</h3>
+                <p>123 Education Street</p>
+                <p>Learning City, 12345</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="icon green"><span>✉️</span></div>
+              <div>
+                <h3>Email Us</h3>
+                <p>General Inquiries: info@studentinitiative.org</p>
+                <p>Support: support@studentinitiative.org</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="icon yellow"><span>📞</span></div>
+              <div>
+                <h3>Call Us</h3>
+                <p>Main Office: (123) 456-7890</p>
+                <p>Support Hotline: (123) 456-7891</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="icon blue"><span>⏰</span></div>
+              <div>
+                <h3>Office Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                <p>Saturday: 10:00 AM - 2:00 PM (By appointment)</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="right">
+          <h2>Send Us a Message</h2>
+          <form>
+            <div class="row">
+              <div class="field">
+                <label>First Name</label>
+                <input type="text" placeholder="First Name" />
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" placeholder="Last Name" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Email</label>
+              <input type="email" placeholder="Email Address" />
+            </div>
+
+            <div class="field">
+              <label>Phone (Optional)</label>
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+
+            <div class="field">
+              <label>Subject</label>
+              <select>
+                <option>Select subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="programs">Programs Information</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="donate">Donations</option>
+                <option value="support">Support</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Message</label>
+              <textarea placeholder="How can we help you?"></textarea>
+            </div>
+
+            <button type="submit">Send Message ✉️</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map">
+      <div class="container text-center">
+        <h2>Find Us</h2>
+        <p>Visit our main office to learn more about our programs and services.</p>
+        <div class="map-placeholder">
+          <div>
+            <span class="icon">📍</span>
+            <p class="title">Interactive Map Would Be Here</p>
+            <p>123 Education Street, Learning City, 12345</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find quick answers to common questions about our programs and services.</p>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>How can I apply for your programs?</h3>
+            <p>You can apply for our programs through the Programs page on our website. Each program has specific application requirements and deadlines, which are detailed on the respective program pages.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Are your programs free for students?</h3>
+            <p>Many of our core programs are free for eligible students. Some specialized programs may have nominal fees, but we offer scholarships and financial assistance to ensure that cost is not a barrier to participation.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How can I support your initiative as a business?</h3>
+            <p>Businesses can support our initiative through corporate sponsorships, employee volunteer programs, in-kind donations, and more. Visit our Get Involved page or contact our partnership team for more information.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer accommodations for students with disabilities?</h3>
+            <p>Yes, we are committed to inclusivity and provide various accommodations for students with disabilities. Please contact our support team to discuss specific needs and how we can best support you.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How can I become a mentor?</h3>
+            <p>To become a mentor, visit our Get Involved page and complete the mentor application form. Our team will review your application and contact you to discuss the next steps in the process.</p>
+          </div>
+        </div>
+
+        <p class="footer-note">Don't see your question here? Contact us directly and we'll be happy to help.</p>
+        <button class="support-btn">Contact Support</button>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- About -->
+      <div class="footer-section">
+        <h3>StudentInitiative</h3>
+        <p>Empowering students with skills, resources, and mentorship to live purposeful lives in an inclusive community.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" /></a>
+          <a href="#" aria-label="Twitter"><img src="twitter-icon.svg" alt="Twitter" /></a>
+          <a href="#" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" /></a>
+          <a href="#" aria-label="LinkedIn"><img src="linkedin-icon.svg" alt="LinkedIn" /></a>
+        </div>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/programs">Programs</a></li>
+          <li><a href="/get-involved">Get Involved</a></li>
+          <li><a href="/stories">Success Stories</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact -->
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><img src="map-pin.svg" alt="" /> 123 Education Street, Learning City, 12345</li>
+          <li><img src="phone.svg" alt="" /> (123) 456-7890</li>
+          <li><img src="mail.svg" alt="" /> info@studentinitiative.org</li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter -->
+      <div class="footer-section">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter for the latest updates and events.</p>
+        <input type="email" placeholder="Your email address" />
+        <a href="/get-involved?tab=donate">
+          <button>Subscribe</button>
+        </a>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 StudentInitiative. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/accessibility">Accessibility</a>
+      </div>
+    </div>
+  </footer>  
+</body>
+<script src="app.js"></script>
+</html>

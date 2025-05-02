@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <header class="header">
+            <div class="header-container">
+              <!-- Logo -->
+              <a href="/" class="logo">StudentInitiative</a>
+          
+              <!-- Desktop Navigation -->
+              <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="programs.html" class="nav-link">Programs</a>
+                <a href="getinvolved.html" class="nav-link">Get Involved</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="/get-involved?tab=donate" class="donate-btn">Donate</a>
+              </nav>
+          
+              <!-- Mobile Toggle -->
+              <button class="menu-toggle" onclick="toggleMenu()">
+                <img id="menu-icon" src="menu.svg" alt="Menu" />
+              </button>
+            </div>
+          
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="mobile-nav">
+              <a href="index.html" class="mobile-link">Home</a>
+              <a href="about.html" class="mobile-link">About Us</a>
+              <a href="programs.html" class="mobile-link">Programs</a>
+              <a href="getinvolved.html" class="mobile-link">Get Involved</a>
+              <a href="contact.html" class="mobile-link">Contact</a>
+              <a href="/get-involved?tab=donate" class="donate-btn full">Donate</a>
+            </div>
+          </header>
+                 
+              <link rel="stylesheet" href="styles.css" />
+              <style>
+                /* Utility Styles */
+                body {
+                  margin: 0;
+                  font-family: Arial, sans-serif;
+                  line-height: 1.6;
+                }
+                .container {
+                  max-width: 1200px;
+                  margin: 0 auto;
+                  padding: 0 1rem;
+                }
+                .text-center {
+                  text-align: center;
+                }
+                .text-white {
+                  color: white;
+                }
+                .text-gray-700 {
+                  color: #4a5568;
+                }
+                .text-gray-900 {
+                  color: #1a202c;
+                }
+                .bg-blue {
+                  background-color: #2563eb;
+                }
+                .bg-white {
+                  background-color: white;
+                }
+                .bg-green {
+                  background-color: #16a34a;
+                }
+                .bg-yellow {
+                  background-color: #facc15;
+                }
+                .py-20 {
+                  padding-top: 5rem;
+                  padding-bottom: 5rem;
+                }
+                .py-16 {
+                  padding-top: 4rem;
+                  padding-bottom: 4rem;
+                }
+                .mb-4 {
+                  margin-bottom: 1rem;
+                }
+                .mb-6 {
+                  margin-bottom: 1.5rem;
+                }
+                .mb-8 {
+                  margin-bottom: 2rem;
+                }
+                .mt-12 {
+                  margin-top: 3rem;
+                }
+                .grid {
+                  display: grid;
+                  gap: 1.5rem;
+                }
+                .grid-2 {
+                  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                }
+                .grid-3 {
+                  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                }
+                .section-title {
+                  font-size: 2rem;
+                  font-weight: bold;
+                }
+                .btn {
+                  padding: 0.75rem 1.5rem;
+                  border: none;
+                  border-radius: 0.375rem;
+                  cursor: pointer;
+                  font-weight: bold;
+                }
+                .btn-blue {
+                  background-color: #2563eb;
+                  color: white;
+                }
+                .btn-green {
+                  background-color: #16a34a;
+                  color: white;
+                }
+                .btn-yellow {
+                  background-color: #facc15;
+                  color: #1e3a8a;
+                }
+                .card {
+                  border: 1px solid #e5e7eb;
+                  border-radius: 0.5rem;
+                  padding: 1rem;
+                  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                }
+                .card-title {
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin-bottom: 0.5rem;
+                }
+                .card-content {
+                  margin-bottom: 1rem;
+                }
+                .card-footer {
+                  text-align: center;
+                }
+                img {
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                  border-radius: 0.5rem;
+                }
+                .footer {
+  background-color: #1e3a8a; /* blue-900 */
+  color: white;
+  padding: 3rem 1rem;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.footer-section input[type="email"] {
+  padding: 0.5rem;
+  border: 1px solid #1e40af;
+  background-color: #1e40af;
+  color: white;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section input::placeholder {
+  color: #93c5fd;
+}
+
+.footer-section button {
+  width: 100%;
+  background-color: #facc15; /* yellow-500 */
+  color: #1e3a8a; /* blue-900 */
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-section button:hover {
+  background-color: #eab308; /* yellow-600 */
+}
+
+.social-icons a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #93c5fd;
+  margin-top: 2rem;
+  border-top: 1px solid #1e40af;
+  padding-top: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+/* Base styling */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb; /* blue-600 */
+  text-decoration: none;
+}
+
+/* Desktop Nav */
+.nav {
+  display: none;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.nav-link:hover {
+  background-color: #f9fafb;
+  color: #2563eb;
+}
+
+.nav-link.active {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.donate-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.donate-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  background: none;
+  border: none;
+  display: block;
+}
+
+.menu-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem;
+}
+
+.mobile-link {
+  padding: 0.75rem;
+  text-decoration: none;
+  color: #374151;
+  border-radius: 0.375rem;
+}
+
+.mobile-link:hover {
+  background-color: #f9fafb;
+  color: #2563eb;
+}
+
+.full {
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
+              </style>
+            </head>
+            <body>
+              <section class="bg-blue text-white py-20">
+                <div class="container">
+                  <h1 class="section-title mb-6">Our Programs</h1>
+                  <p class="text-xl mb-8">
+                    Discover our range of programs designed to empower students with skills, resources, and mentorship.
+                  </p>
+                </div>
+              </section>
+          
+              <section class="py-16 bg-white">
+                <div class="container">
+                  <h2 class="section-title mb-4">Skills Development</h2>
+                  <p class="text-gray-700 mb-6">
+                    Our skills development programs equip students with practical, in-demand skills for today's job market and future careers.
+                  </p>
+                  <div class="grid grid-2 mb-6">
+                    <div>
+                      <ul class="mb-6">
+                        <li>Hands-on workshops led by industry professionals</li>
+                        <li>Technical and soft skills training</li>
+                        <li>Project-based learning opportunities</li>
+                      </ul>
+                      <button class="btn btn-blue">Explore Skills Programs</button>
+                    </div>
+                    <img src="/placeholder.svg?height=400&width=600&text=Skills+Workshop" alt="Students in a skills workshop" />
+                  </div>
+          
+                  <div class="grid grid-3">
+                    <div class="card">
+                      <div class="card-title">Digital Literacy</div>
+                      <div class="card-content">
+                        Essential computer skills, online research, and digital tools mastery.
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-blue">Learn More</button>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-title">Career Readiness</div>
+                      <div class="card-content">
+                        Resume building, interview preparation, and professional networking.
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-blue">Learn More</button>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-title">Technical Training</div>
+                      <div class="card-content">
+                        Programming, design, and other technical skills for the modern workplace.
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-blue">Learn More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          
+              <section class="py-16 bg-white">
+                <div class="container">
+                  <h2 class="section-title mb-4">Mentorship Programs</h2>
+                  <p class="text-gray-700 mb-6">
+                    Connect with experienced mentors who provide personalized guidance to help you achieve your academic and career goals.
+                  </p>
+                  <div class="grid grid-2 mb-6">
+                    <img src="/placeholder.svg?height=400&width=600&text=Mentorship+Program" alt="Mentor and student meeting" />
+                    <div>
+                      <ul class="mb-6">
+                        <li>One-on-one mentorship with industry professionals</li>
+                        <li>Group mentoring sessions and networking events</li>
+                        <li>Peer mentorship opportunities</li>
+                      </ul>
+                      <button class="btn btn-green">Find a Mentor</button>
+                    </div>
+                  </div>
+          
+                  <div class="grid grid-3">
+                    <div class="card">
+                      <div class="card-title">Career Mentorship</div>
+                      <div class="card-content">
+                        Guidance from professionals in your desired career field.
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-green">Learn More</button>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-title">Academic Mentorship</div>
+                      <div class="card-content">
+                        Support for academic challenges and educational planning.
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-green">Learn More</button>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-title">Life Skills Mentorship</div>
+                      <div class="card-content">
+                        Guidance on personal development and life challenges.
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-green">Learn More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          
+              <section class="py-16 bg-white">
+                <div class="container">
+                  <h2 class="section-title mb-4">Support Services</h2>
+                  <p class="text-gray-700 mb-6">
+                    Specialized resources and support for all students, with dedicated programs for disabled students and young mothers.
+                  </p>
+                  <div class="grid grid-2 mb-6">
+                    <div>
+                      <ul class="mb-6">
+                        <li>Accessibility resources and accommodations</li>
+                        <li>Childcare assistance for student parents</li>
+                        <li>Mental health and wellness resources</li>
+                      </ul>
+                      <button class="btn btn-yellow">Access Support Services</button>
+                    </div>
+                    <img src="/placeholder.svg?height=400&width=600&text=Support+Services" alt="Support services for students" />
+                  </div>
+          
+                  <div class="grid grid-3">
+                    <div class="card">
+                      <div class="card-title">Accessibility Services</div>
+                      <div class="card-content">
+                        Resources and accommodations for students with disabilities.
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-yellow">Learn More</button>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-title">Parent Support</div>
+                      <div class="card-content">
+                        Resources for student parents, including childcare assistance.
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-yellow">Learn More</button>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-title">Wellness Resources</div>
+                      <div class="card-content">
+                        Mental health support and wellness programs for all students.
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-yellow">Learn More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <style>
+                body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+                .section { padding: 4rem 1rem; }
+                .bg-gray-50 { background-color: #f9fafb; }
+                .bg-white { background-color: white; }
+                .bg-blue-600 { background-color: #2563eb; color: white; }
+                .text-center { text-align: center; }
+                .text-gray-900 { color: #111827; }
+                .text-gray-600 { color: #4b5563; }
+                .text-blue-600 { color: #2563eb; }
+                .font-bold { font-weight: bold; }
+                .text-xl { font-size: 1.25rem; }
+                .text-3xl { font-size: 1.875rem; }
+                .grid { display: grid; gap: 1.5rem; }
+                .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+                .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+                .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+                .card { border: 1px solid #e5e7eb; border-radius: 0.5rem; overflow: hidden; background: white; display: flex; flex-direction: column; }
+                .card img { width: 100%; height: 200px; object-fit: cover; }
+                .card-body { padding: 1rem; }
+                .card-footer { padding: 1rem; border-top: 1px solid #e5e7eb; }
+                .btn { padding: 0.75rem 1.5rem; border-radius: 0.375rem; font-weight: bold; cursor: pointer; text-align: center; display: inline-block; }
+                .btn-outline { border: 2px solid; background: transparent; }
+                .btn-blue { color: #2563eb; border-color: #2563eb; }
+                .btn-yellow { background-color: #facc15; color: #1e40af; }
+                .btn-white-outline { border-color: white; color: white; }
+                .btn-white-outline:hover { background-color: white; color: #2563eb; }
+                .avatar { border-radius: 9999px; overflow: hidden; width: 80px; height: 80px; }
+                .italic { font-style: italic; }
+                .flex { display: flex; }
+                .flex-col { flex-direction: column; }
+                .flex-row { flex-direction: row; }
+                .justify-between { justify-content: space-between; }
+                .justify-center { justify-content: center; }
+                .items-center { align-items: center; }
+                .gap-4 { gap: 1rem; }
+                .gap-6 { gap: 1.5rem; }
+                .gap-8 { gap: 2rem; }
+                .mt-2 { margin-top: 0.5rem; }
+                .mt-4 { margin-top: 1rem; }
+                .mt-8 { margin-top: 2rem; }
+                .mt-12 { margin-top: 3rem; }
+                .mb-4 { margin-bottom: 1rem; }
+                .mb-6 { margin-bottom: 1.5rem; }
+                .mb-8 { margin-bottom: 2rem; }
+                .mb-12 { margin-bottom: 3rem; }
+              </style>
+            </head>
+            <body>
+              <section class="section bg-gray-50">
+                <div class="container">
+                  <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Upcoming Workshops & Events</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                      Join us for these upcoming learning opportunities and community events.
+                    </p>
+                  </div>
+                  <div class="grid md:grid-cols-3">
+                    <div class="card">
+                      <img src="/placeholder.svg?height=200&width=400&text=Digital+Marketing" alt="Digital Marketing Fundamentals">
+                      <div class="card-body">
+                        <div class="flex justify-between items-center mb-4">
+                          <h3 class="text-xl font-bold">Digital Marketing Fundamentals</h3>
+                          <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Skills Workshop</span>
+                        </div>
+                        <p class="text-gray-600">June 15, 2025 • 2:00 PM - 4:00 PM</p>
+                        <p class="text-gray-600">Main Campus, Room 302</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="btn btn-blue btn-outline">Register Now</div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="/placeholder.svg?height=200&width=400&text=Resume+Workshop" alt="Resume Building Workshop">
+                      <div class="card-body">
+                        <div class="flex justify-between items-center mb-4">
+                          <h3 class="text-xl font-bold">Resume Building Workshop</h3>
+                          <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Career Development</span>
+                        </div>
+                        <p class="text-gray-600">June 22, 2025 • 1:00 PM - 3:00 PM</p>
+                        <p class="text-gray-600">Career Center</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="btn btn-blue btn-outline">Register Now</div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="/placeholder.svg?height=200&width=400&text=Networking+Event" alt="Mentor Match Networking Event">
+                      <div class="card-body">
+                        <div class="flex justify-between items-center mb-4">
+                          <h3 class="text-xl font-bold">Mentor Match Networking Event</h3>
+                          <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Mentorship</span>
+                        </div>
+                        <p class="text-gray-600">July 5, 2025 • 5:00 PM - 7:00 PM</p>
+                        <p class="text-gray-600">Student Union</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="btn btn-blue btn-outline">Register Now</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-12">
+                    <div class="btn btn-outline btn-blue">View All Events →</div>
+                  </div>
+                </div>
+              </section>
+            
+              <section class="section bg-white">
+                <div class="container">
+                  <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Program Success Stories</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                      See how our programs have made a difference in students' lives.
+                    </p>
+                  </div>
+                  <div class="grid md:grid-cols-2">
+                    <div class="card">
+                      <div class="card-body flex flex-row gap-6">
+                        <div class="avatar">
+                          <img src="/placeholder.svg?height=100&width=100&text=MC" alt="Michael Chen" />
+                        </div>
+                        <div>
+                          <p class="italic mb-4">"The digital skills workshop helped me secure an internship at a major tech company. I'm now employed full-time and loving my career!"</p>
+                          <h4 class="font-bold">Michael Chen</h4>
+                          <p class="text-blue-600 text-sm">Digital Skills Workshop</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body flex flex-row gap-6">
+                        <div class="avatar">
+                          <img src="/placeholder.svg?height=100&width=100&text=ER" alt="Emma Rodriguez" />
+                        </div>
+                        <div>
+                          <p class="italic mb-4">"As a student with a disability, the accessibility resources provided made it possible for me to excel in my studies and graduate with honors."</p>
+                          <h4 class="font-bold">Emma Rodriguez</h4>
+                          <p class="text-blue-600 text-sm">Accessibility Support Services</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-12">
+                    <div class="btn btn-outline btn-blue">Read More Success Stories →</div>
+                  </div>
+                </div>
+              </section>
+            
+              <section class="section bg-blue-600">
+                <div class="container text-center">
+                  <h2 class="text-3xl font-bold mb-6">Ready to Join a Program?</h2>
+                  <p class="text-xl mb-8">
+                    Take the first step toward your future by enrolling in one of our programs or attending an upcoming event.
+                  </p>
+                  <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <div class="btn btn-yellow">Browse Programs</div>
+                    <div class="btn btn-white-outline">Contact an Advisor</div>
+                  </div>
+                </div>
+              </section>  
+              <footer class="footer">
+                <div class="footer-container">
+                  <!-- About -->
+                  <div class="footer-section">
+                    <h3>StudentInitiative</h3>
+                    <p>Empowering students with skills, resources, and mentorship to live purposeful lives in an inclusive community.</p>
+                    <div class="social-icons">
+                      <a href="#" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" /></a>
+                      <a href="#" aria-label="Twitter"><img src="twitter-icon.svg" alt="Twitter" /></a>
+                      <a href="#" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" /></a>
+                      <a href="#" aria-label="LinkedIn"><img src="linkedin-icon.svg" alt="LinkedIn" /></a>
+                    </div>
+                  </div>
+              
+                  <!-- Quick Links -->
+                  <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                      <li><a href="/about">About Us</a></li>
+                      <li><a href="/programs">Programs</a></li>
+                      <li><a href="/get-involved">Get Involved</a></li>
+                      <li><a href="/stories">Success Stories</a></li>
+                      <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                  </div>
+              
+                  <!-- Contact -->
+                  <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                      <li><img src="map-pin.svg" alt="" /> 123 Education Street, Learning City, 12345</li>
+                      <li><img src="phone.svg" alt="" /> (123) 456-7890</li>
+                      <li><img src="mail.svg" alt="" /> info@studentinitiative.org</li>
+                    </ul>
+                  </div>
+              
+                  <!-- Newsletter -->
+                  <div class="footer-section">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for the latest updates and events.</p>
+                    <input type="email" placeholder="Your email address" />
+                    <a href="/get-involved?tab=donate">
+                      <button>Subscribe</button>
+                    </a>
+                  </div>
+                </div>
+              
+                <div class="footer-bottom">
+                  <p>&copy; 2025 StudentInitiative. All rights reserved.</p>
+                  <div class="footer-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/accessibility">Accessibility</a>
+                  </div>
+                </div>
+              </footer>
+              <script src="app.js"></script>            
+</body>
+</html>
