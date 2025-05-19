@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate - Student Initiative Rwanda</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="donate.css" />
+  <!-- AOS Animation Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="/" class="logo">StudentInitiative</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="program.html">Programs</a>
+        <a href="getinvolved.html">Get Involved</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="active donate">Donate</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu hidden">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="program.html">Programs</a>
+    <a href="getinvolved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="active donate">Donate</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="donate-hero-section">
+      <div class="hero-shadow-overlay">
+        <div class="hero-content" data-aos="fade-up">
+          <h1>Support Education in Rwanda</h1>
+          <p>Your donation helps us empower Rwandan students through mentorship, skills development, and comprehensive support.</p>
+          <div class="hero-buttons">
+            <a href="#donate-now" class="btn btn-yellow">Donate Now</a>
+            <a href="#impact" class="btn btn-outline-light">See Your Impact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section id="donate-now" class="section-white donation-form-section">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <h2>Support Our Mission in Rwanda</h2>
+          <p class="section-subtitle">Your contribution makes a real difference in Rwandan students' lives.</p>
+        </div>
+        
+        <div class="donation-grid">
+          <!-- Left: Donation Form -->
+          <div class="donation-form-container" data-aos="fade-right">
+            <h3 class="form-title">Make Your Donation</h3>
+            <form id="donation-form">
+              <div class="donation-type">
+                <div class="type-selector">
+                  <label>
+                    <input type="radio" name="donation-type" value="one-time" checked />
+                    <span>One-time</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="donation-type" value="monthly" />
+                    <span>Monthly</span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="donation-amount-section">
+                <label>Select Amount</label>
+                <div class="amount-options">
+                  <label>
+                    <input type="radio" name="amount" value="25" />
+                    <span>$25</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="amount" value="50" />
+                    <span>$50</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="amount" value="100" checked />
+                    <span>$100</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="amount" value="custom" />
+                    <span>Custom</span>
+                  </label>
+                </div>
+                
+                <div class="custom-amount" id="custom-amount-container">
+                  <label for="custom-amount">Enter Amount</label>
+                  <div class="input-with-icon">
+                    <span class="currency-symbol">$</span>
+                    <input type="number" id="custom-amount" placeholder="Enter amount" min="1" />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-divider">
+                <span>Personal Information</span>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" placeholder="First Name" required />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" placeholder="Last Name" required />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email Address" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone (Optional)</label>
+                <input type="tel" id="phone" placeholder="Phone Number" />
+              </div>
+              
+              <div class="form-divider">
+                <span>Payment Method</span>
+              </div>
+              
+              <div class="payment-methods">
+                <div class="payment-method-selector">
+                  <label class="payment-option">
+                    <input type="radio" name="payment-method" value="momo" checked />
+                    <span class="payment-option-inner">
+                      <img src="/placeholder.svg?height=30&width=60&text=MTN+MoMo" alt="MTN MoMo" />
+                      <span>Mobile Money</span>
+                    </span>
+                  </label>
+                  
+                  <label class="payment-option">
+                    <input type="radio" name="payment-method" value="card" />
+                    <span class="payment-option-inner">
+                      <img src="/placeholder.svg?height=30&width=60&text=Card" alt="Credit Card" />
+                      <span>Credit/Debit Card</span>
+                    </span>
+                  </label>
+                  
+                  <label class="payment-option">
+                    <input type="radio" name="payment-method" value="bank" />
+                    <span class="payment-option-inner">
+                      <img src="/placeholder.svg?height=30&width=60&text=Bank" alt="Bank Transfer" />
+                      <span>Bank Transfer</span>
+                    </span>
+                  </label>
+                </div>
+                
+                <!-- Mobile Money Payment Form -->
+                <div id="momo-payment" class="payment-details">
+                  <div class="form-group">
+                    <label for="momo-number">Mobile Money Number</label>
+                    <div class="input-with-icon">
+                      <span class="country-code">+250</span>
+                      <input type="tel" id="momo-number"  required />
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="momo-provider">Provider</label>
+                    <select id="momo-provider" required>
+                      <option value="mtn">MTN Mobile Money</option>
+                      <option value="airtel">Airtel Money</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <!-- Credit Card Payment Form -->
+                <div id="card-payment" class="payment-details hidden">
+                  <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <div class="input-with-icon">
+                      <i class="far fa-credit-card"></i>
+                      <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" />
+                    </div>
+                  </div>
+                  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="card-expiry">Expiry Date</label>
+                      <input type="text" id="card-expiry" placeholder="MM/YY" />
+                    </div>
+                    <div class="form-group">
+                      <label for="card-cvc">CVC</label>
+                      <input type="text" id="card-cvc" placeholder="CVC" />
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" placeholder="Name on Card" />
+                  </div>
+                </div>
+                
+                <!-- Bank Transfer Payment Form -->
+                <div id="bank-payment" class="payment-details hidden">
+                  <div class="bank-info">
+                    <p>Please use the following bank details to make your transfer:</p>
+                    <ul>
+                      <li><strong>Bank:</strong> Bank of Kigali</li>
+                      <li><strong>Account Name:</strong> Student Initiative Rwanda</li>
+                      <li><strong>Account Number:</strong> 00012345678</li>
+                      <li><strong>Swift Code:</strong> BKIGRWRW</li>
+                      <li><strong>Reference:</strong> Your Name + Donation</li>
+                    </ul>
+                    <p class="note">Please email a copy of your transfer receipt to <a href="mailto:finance@studentinitiative.org">finance@studentinitiative.org</a></p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="newsletter" checked />
+                  <span>Receive updates about our programs and impact</span>
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary full-width flutterwave-btn">
+                <span>Complete Donation</span>
+                <i class="fas fa-heart"></i>
+              </button>
+              
+              <div class="secure-payment">
+                <i class="fas fa-lock"></i>
+                <span>Secure payment processing. Your information is protected.</span>
+              </div>
+              
+              <div class="payment-logos">
+                <img src="/placeholder.svg?height=30&width=50&text=MTN" alt="MTN MoMo" />
+                <img src="/placeholder.svg?height=30&width=50&text=Airtel" alt="Airtel Money" />
+                <img src="/placeholder.svg?height=30&width=50&text=Visa" alt="Visa" />
+                <img src="/placeholder.svg?height=30&width=50&text=MasterCard" alt="MasterCard" />
+                <img src="/placeholder.svg?height=30&width=80&text=Flutterwave" alt="Flutterwave" />
+              </div>
+            </form>
+          </div>
+          
+          <!-- Right: Impact Information -->
+          <div class="donation-impact-container" data-aos="fade-left">
+            <div class="impact-card" id="impact">
+              <h3>Your Donation Makes a Difference in Rwanda</h3>
+              <div class="impact-items">
+                <div class="impact-item">
+                  <div class="impact-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="impact-content">
+                    <h4>$25</h4>
+                    <p>Provides study materials for one Rwandan student</p>
+                  </div>
+                </div>
+                
+                <div class="impact-item">
+                  <div class="impact-icon">
+                    <i class="fas fa-laptop"></i>
+                  </div>
+                  <div class="impact-content">
+                    <h4>$50</h4>
+                    <p>Funds a digital skills workshop for 5 students in Kigali</p>
+                  </div>
+                </div>
+                
+                <div class="impact-item">
+                  <div class="impact-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div class="impact-content">
+                    <h4>$100</h4>
+                    <p>Supports a mentorship session for 10 students in rural Rwanda</p>
+                  </div>
+                </div>
+                
+                <div class="impact-item">
+                  <div class="impact-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                  </div>
+                  <div class="impact-content">
+                    <h4>$250</h4>
+                    <p>Provides a semester of education support for students in Rwanda</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p>"The scholarship I received changed my life. I was able to focus on my studies without financial stress and graduate with honors. Now I can help my family and community in Rwanda."</p>
+                <div class="testimonial-author">
+                  <img src="/assests/medium-shot-smiley-man-ready-travel.jpg" alt="Student" />
+                  <span>Jean-Paul M., Scholarship Recipient</span>
+                </div>
+              </div>
+              
+              <div class="contact-info">
+                <p>Questions about donating? Contact our team:</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:giving@studentinitiative.org">giving@studentinitiative.org</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+250788123456">+250 788 123 456</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section-light impact-section">
+      <div class="container text-center">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Your Impact in Rwanda</h2>
+          <p class="section-subtitle">See how donations have transformed students' lives across Rwanda.</p>
+        </div>
+        
+        <div class="impact-stats" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-item">
+            <div class="stat-number" data-count="1500">0</div>
+            <div class="stat-label">Students Supported</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number" data-count="120">0</div>
+            <div class="stat-label">Scholarships Awarded</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number" data-count="25">0</div>
+            <div class="stat-label">Communities Reached</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number" data-count="85">0</div>
+            <div class="stat-label">Success Rate (%)</div>
+          </div>
+        </div>
+        
+        <div class="impact-stories" data-aos="fade-up" data-aos-delay="200">
+          <h3>Success Stories from Rwanda</h3>
+          
+          <div class="stories-grid">
+            <div class="story-card card-hover-effect">
+              <div class="card-inner">
+                <div class="story-image">
+                  <img src="/assests/confident-good-looking-outgoing-nice-dark-skinned-curly-haired-female-friend-suggesting-visit-cozy-cafe-pointing-sideways-inviting-come-smiling-broadly-friendly-vibe-holding-hand-waist-casually.jpg" alt="Claude's Story" />
+                </div>
+                <div class="story-content">
+                  <h4>Marie's Journey</h4>
+                  <p>"The mentorship program connected me with a professional who guided me through internship applications. I'm now employed at a tech company in Kigali."</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="story-card card-hover-effect">
+              <div class="card-inner">
+                <div class="story-image">
+                  <img src="/assests/african-american-student-walking-park.jpg" alt="Marie's Story" />
+                </div>
+                <div class="story-content">
+                  <h4>Claude's Achievement</h4>
+                  <p>"With the support I received, I was able to excel in my studies and graduate with honors. I'm now pursuing my master's degree in Sustainable Development."</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="story-card card-hover-effect">
+              <div class="card-inner">
+                <div class="story-image">
+                  <img src="/assests/afro-american-woman-model-studio.jpg" alt="Emmanuel's Story" />
+                </div>
+                <div class="story-content">
+                  <h4>Emmanuella's Success</h4>
+                  <p>"The skills development program taught me practical digital skills. These skills helped me secure a job and support my family in rural Rwanda."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-cta donate-cta-section" data-aos="zoom-in">
+      <div class="container cta-content">
+        <div>
+          <h2>Join Our Mission in Rwanda Today</h2>
+          <p>Your support helps us empower Rwandan students to achieve their full potential and create a brighter future.</p>
+        </div>
+        <div class="hero-actions">
+          <a href="#donate-now" class="btn primary">Donate Now</a>
+          <a href="getinvolved.html" class="btn outline-light">Other Ways to Help</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Flutterwave Payment Modal -->
+    <div id="flutterwave-modal" class="payment-modal">
+      <div class="payment-modal-content">
+        <div class="payment-modal-header">
+          <h3>Complete Your Payment</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="payment-modal-body">
+          <!-- Flutterwave-like interface -->
+          <div class="payment-processor-header">
+            <img src="/placeholder.svg?height=40&width=150&text=Flutterwave" alt="Flutterwave" />
+            <p>Secure Payment Processing</p>
+          </div>
+          
+          <div class="payment-summary">
+            <div class="payment-amount">
+              <span>Amount:</span>
+              <span id="modal-amount">$100.00</span>
+            </div>
+            <div class="payment-to">
+              <span>To:</span>
+              <span>Student Initiative Rwanda</span>
+            </div>
+          </div>
+          
+          <div class="payment-tabs">
+            <div class="payment-tab active" data-tab="momo-tab">Mobile Money</div>
+            <div class="payment-tab" data-tab="card-tab">Card Payment</div>
+            <div class="payment-tab" data-tab="bank-tab">Bank Transfer</div>
+          </div>
+          
+          <div class="payment-tab-content active" id="momo-tab">
+            <div class="form-group">
+              <label>Mobile Money Number</label>
+              <div class="input-with-icon">
+                <span class="country-code">+250</span>
+                <input type="tel" placeholder="7XX XXX XXX" class="modal-input" />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Select Provider</label>
+              <div class="provider-options">
+                <label class="provider-option">
+                  <input type="radio" name="modal-provider" value="mtn" checked />
+                  <span class="provider-option-inner">
+                    <img src="/placeholder.svg?height=30&width=60&text=MTN+MoMo" alt="MTN MoMo" />
+                    <span>MTN Mobile Money</span>
+                  </span>
+                </label>
+                
+                <label class="provider-option">
+                  <input type="radio" name="modal-provider" value="airtel" />
+                  <span class="provider-option-inner">
+                    <img src="/placeholder.svg?height=30&width=60&text=Airtel" alt="Airtel Money" />
+                    <span>Airtel Money</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            
+            <button class="btn btn-primary full-width">Pay Now</button>
+            <p class="payment-note">You will receive a prompt on your phone to confirm this payment.</p>
+          </div>
+          
+          <div class="payment-tab-content" id="card-tab">
+            <div class="form-group">
+              <label>Card Number</label>
+              <div class="input-with-icon">
+                <i class="far fa-credit-card"></i>
+                <input type="text" placeholder="XXXX XXXX XXXX XXXX" class="modal-input" />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>Expiry Date</label>
+                <input type="text" placeholder="MM/YY" class="modal-input" />
+              </div>
+              <div class="form-group">
+                <label>CVC</label>
+                <input type="text" placeholder="CVC" class="modal-input" />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Name on Card</label>
+              <input type="text" placeholder="Name on Card" class="modal-input" />
+            </div>
+            
+            <button class="btn btn-primary full-width">Pay Now</button>
+            <div class="card-logos">
+              <img src="/placeholder.svg?height=20&width=40&text=Visa" alt="Visa" />
+              <img src="/placeholder.svg?height=20&width=40&text=MC" alt="MasterCard" />
+              <img src="/placeholder.svg?height=20&width=40&text=Amex" alt="American Express" />
+            </div>
+          </div>
+          
+          <div class="payment-tab-content" id="bank-tab">
+            <div class="bank-transfer-info">
+              <p>Please use the following bank details to make your transfer:</p>
+              <div class="bank-details">
+                <div class="bank-detail-item">
+                  <span>Bank:</span>
+                  <span>Bank of Kigali</span>
+                </div>
+                <div class="bank-detail-item">
+                  <span>Account Name:</span>
+                  <span>Student Initiative Rwanda</span>
+                </div>
+                <div class="bank-detail-item">
+                  <span>Account Number:</span>
+                  <span>00012345678</span>
+                </div>
+                <div class="bank-detail-item">
+                  <span>Swift Code:</span>
+                  <span>BKIGRWRW</span>
+                </div>
+                <div class="bank-detail-item">
+                  <span>Reference:</span>
+                  <span>Your Name + Donation</span>
+                </div>
+              </div>
+              <p class="payment-note">Please email a copy of your transfer receipt to <a href="mailto:finance@studentinitiative.org">finance@studentinitiative.org</a></p>
+            </div>
+          </div>
+          
+          <div class="secure-payment-footer">
+            <i class="fas fa-lock"></i>
+            <span>Your payment information is secure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Column 1 -->
+      <div>
+        <h3>StudentInitiative</h3>
+        <p>Empowering students in Rwanda to live purposeful lives through mentorship, skills development, and comprehensive support.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="program.html">Our Programs</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <!-- Column 3 -->
+      <div>
+        <h4>Contact</h4>
+        <p>KG 123 St, Kigali, Rwanda<br />
+        <i class="fas fa-phone"></i> +250 788 123 456<br />
+        <i class="fas fa-envelope"></i> info@studentinitiative.org</p>
+      </div>
+      <!-- Column 4 -->
+      <div>
+        <h4>Newsletter</h4>
+        <p>Stay updated with our latest news and events.</p>
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+        <button class="btn primary full-width">Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 StudentInitiative Rwanda. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="index.js"></script>
+  <script src="donate.js"></script>
+</body>
+</html>

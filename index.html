@@ -3,211 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Empowering Students</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Student Initiative - Empowering Students for a Purposeful Future</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-          <header class="header">
-            <div class="header-container">
-              <!-- Logo -->
-              <a href="/" class="logo">StudentInitiative</a>
-          
-              <!-- Desktop Navigation -->
-              <nav class="nav">
-                <a href="index.html" class="nav-link ">Home</a>
-                <a href="about.html" class="nav-link ">About Us</a>
-                <a href="programs.html" class="nav-link ">Programs</a>
-                <a href="getinvolved.html" class="nav-link ">Get Involved</a>
-                <a href="contact.html" class="nav-link ">Contact</a>
-                <a href="/get-involved?tab=donate" class="donate-btn">Donate</a>
-              </nav>
-   
-              <!-- Mobile Toggle -->
-              <button class="menu-toggle" onclick="toggleMenu()">
-                <img id="menu-icon" src="menu.svg" alt="Menu" />
-              </button>
-            </div>
-          
-            <!-- Mobile Navigation -->
-            <div id="mobileMenu" class="mobile-nav">
-              <a href="index.html" class="mobile-link">Home</a>
-              <a href="about.html" class="mobile-link">About Us</a>
-              <a href="programs.html" class="mobile-link">Programs</a>
-              <a href="getinvolved.html" class="mobile-link">Get Involved</a>
-              <a href="contact.html" class="mobile-link">Contact</a>
-              <a href="/get-involved?tab=donate" class="donate-btn full">Donate</a>
-            </div>
-          </header>
-          
-  <div class="page-container">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="/" class="logo">StudentInitiative</a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home<span class="hover-circle"></span></a>
+        <a href="about.html">About<span class="hover-circle"></span></a>
+        <a href="program.html">Programs<span class="hover-circle"></span></a>
+        <a href="getinvolved.html">Get Involved<span class="hover-circle"></span></a>
+        <a href="contact.html">Contact<span class="hover-circle"></span></a>
+        <a href="donate.html" class="donate">Donate</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
+  <div class="mobile-menu hidden">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="program.html">Programs</a>
+    <a href="getinvolved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="donate">Donate</a>
+  </div>
+
+  <main>
+    <!-- Hero Section with Enhanced Shadow -->
     <section class="hero-section">
-      <div class="hero-container">
-        <div class="hero-content">
+      <div class="hero-shadow-overlay">
+        <div class="hero-content" data-aos="fade-up">
           <h1>Empowering Students for a Purposeful Future</h1>
-          <p>Providing skills, resources, and mentorship to help students thrive in an inclusive community.</p>
+          <p>Helping the next generation with skills, mentorship, and opportunity.</p>
           <div class="hero-buttons">
-            <a href="#" class="btn btn-yellow">Get Started</a>
-            <a href="#" class="btn btn-outline">Learn More</a>
+            <a href="#programs" class="btn btn-blue">Get Started</a>
+            <a href="about.html" class="btn btn-outline-blue">Learn More</a>
           </div>
         </div>
       </div>
-      <div class="hero-image"></div>
     </section>
 
-    <!-- Programs -->
-    <section class="section-gray">
-      <div class="text-center">
-        <h2>Our Programs</h2>
-        <p>Discover how we're empowering students through our diverse range of programs and resources.</p>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <h3 class="text-blue">Skills Development</h3>
-          <p>Practical workshops and training sessions to build real-world skills.</p>
-          <a href="#" class="btn btn-outline full-width">Learn More →</a>
+    <!-- Programs Section -->
+    <section id="programs" class="section-light">
+      <div class="container text-center">
+        <h2 data-aos="fade-up">Our Programs</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Equipping students with real-world skills and support.</p>
+        <div class="cards" data-aos="fade-up" data-aos-delay="200">
+          <div class="card card-hover-effect">
+            <div class="card-inner">
+              <h3>Skills Development</h3>
+              <p>Workshops and sessions to build confidence and practical expertise in technology, communication, and leadership.</p>
+              <a href="program.html#skills" class="btn tertiary">Learn More →</a>
+            </div>
+          </div>
+          <div class="card spotlight card-hover-effect">
+            <div class="card-inner">
+              <h3>Mentorship</h3>
+              <p>Connect one-on-one with experienced mentors from various industries who are passionate about guiding the next generation.</p>
+              <a href="program.html#mentorship" class="btn tertiary">Learn More →</a>
+            </div>
+          </div>
+          <div class="card card-hover-effect">
+            <div class="card-inner">
+              <h3>Inclusive Support</h3>
+              <p>Tailored assistance for disabled students, young mothers, and other underserved groups to ensure education is accessible to all.</p>
+              <a href="program.html#support" class="btn tertiary">Learn More →</a>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3 class="text-green">Mentorship</h3>
-          <p>One-on-one guidance from industry experts.</p>
-          <a href="#" class="btn btn-outline full-width">Learn More →</a>
-        </div>
-        <div class="card">
-          <h3 class="text-yellow">Inclusive Support</h3>
-          <p>Tailored support for disabled students and young mothers.</p>
-          <a href="#" class="btn btn-outline full-width">Learn More →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section-white">
-      <div class="text-center">
-        <h2>Success Stories</h2>
-        <p>Hear from students whose lives have been transformed through our programs.</p>
-        <div class="testimonial-carousel">[Carousel Placeholder]</div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section-green">
-      <div class="cta-container">
+    <!-- Success Stories -->
+    <section class="success-stories">
+      <div class="container text-center">
+        <h2 data-aos="fade-up">Success Stories</h2>
+        <div class="carousel" data-aos="fade-up" data-aos-delay="100">
+          <div class="carousel-item">
+            <div class="testimonial-image-container">
+              <img src="assests/imageeee.jpg" alt="Alex">
+            </div>
+            <p>"Thanks to the mentorship program, I secured my first internship at a leading tech company. The skills and confidence I gained changed my career trajectory completely!"</p>
+            <span>- Alex, Software Engineering Intern</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section with animated gradient -->
+    <section class="section-cta" data-aos="zoom-in">
+      <div class="container cta-content">
         <div>
           <h2>Ready to Make a Difference?</h2>
-          <p>Join our community of volunteers, mentors, and donors who are helping to shape the future of our students.</p>
+          <p>Join our community of mentors, volunteers, and donors changing lives.</p>
         </div>
-        <div class="hero-buttons">
-          <a href="#" class="btn btn-yellow">Donate Now</a>
-          <a href="#" class="btn btn-outline-white">Volunteer</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Events -->
-    <section class="section-gray">
-      <div class="text-center">
-        <h2>Upcoming Events</h2>
-        <p>Join us at our upcoming workshops, seminars, and community gatherings.</p>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <h3 class="text-blue">Career Workshop</h3>
-          <p><strong>June 15, 2025</strong> • Main Campus, Building A</p>
-          <p>Learn how to prepare for job interviews and build your professional network.</p>
-          <a href="#" class="btn btn-outline full-width">Register →</a>
-        </div>
-        <div class="card">
-          <h3 class="text-blue">Coding Bootcamp</h3>
-          <p><strong>July 3–5, 2025</strong> • Tech Hub, Downtown</p>
-          <p>Three-day intensive workshop for beginners and intermediates.</p>
-          <a href="#" class="btn btn-outline full-width">Register →</a>
-        </div>
-        <div class="card">
-          <h3 class="text-blue">Community Meetup</h3>
-          <p><strong>July 20, 2025</strong> • Community Center</p>
-          <p>Connect with fellow students, mentors, and alumni in a casual setting.</p>
-          <a href="#" class="btn btn-outline full-width">Register →</a>
+        <div class="hero-actions">
+          <a href="donate.html" class="btn primary">Donate Now</a>
+          <a href="getinvolved.html" class="btn outline-light">Volunteer</a>
         </div>
       </div>
     </section>
 
-<!-- Partners Carousel -->
-<section class="section-white partners-carousel-section">
-  <div class="text-center">
-    <h2>Our Partners</h2>
-    <p>We're proud to collaborate with these organizations to expand our impact.</p>
-  </div>
-  <div class="carousel-container">
-    <button class="carousel-btn left" onclick="scrollCarousel(-1)">‹</button>
-    <div class="carousel-track" id="partnersCarousel">
-      <div class="carousel-item"><img src="assests\Maranyundo+Logo+1.jpg" alt="Partner 1 Logo" /></div>
-      <div class="carousel-item"><img src="assests\heptadev.PNG" alt="Partner 2 Logo" /></div>
-      <div class="carousel-item"><img src="assests\kpc logo.png" alt="Partner 3 Logo" /></div>
-      <div class="carousel-item"><img src="assests\idebate.png" alt="Partner 4 Logo" /></div>
-      <div class="carousel-item"><img src="assests\alx l.jpg" alt="Partner 5 Logo" /></div>
+    <!-- Events Section -->
+    <section class="section-white">
+      <div class="container text-center">
+        <h2 data-aos="fade-up">Upcoming Events</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Mark your calendars. You don't want to miss these!</p>
+        <div class="cards" data-aos="fade-up" data-aos-delay="200">
+          <div class="card clip-border card-hover-effect">
+            <div class="card-inner">
+              <h3>Career Workshop</h3>
+              <p><strong>June 15</strong> – Main Campus</p>
+              <p>Polish your resume, prep for interviews, and network with professionals in your desired field.</p>
+              <a href="events.html#career" class="btn tertiary">Register →</a>
+            </div>
+          </div>
+          <div class="card glass-card card-hover-effect" style="background: rgba(59, 130, 246, 0.05);">
+            <div class="card-inner">
+              <h3>Coding Bootcamp</h3>
+              <p><strong>July 3–5</strong> – Tech Hub</p>
+              <p>Intro & intermediate-level coding crash course with hands-on projects and industry experts.</p>
+              <a href="events.html#coding" class="btn tertiary">Register →</a>
+            </div>
+          </div>
+          <div class="card neuro card-hover-effect">
+            <div class="card-inner">
+              <h3>Community Meetup</h3>
+              <p><strong>July 20</strong> – Center Grounds</p>
+              <p>Come meet your peers, mentors, and alumni. Network and build lasting connections.</p>
+              <a href="events.html#meetup" class="btn tertiary">Register →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section-light partners-carousel-section">
+      <div class="container text-center">
+        <h2 data-aos="fade-up">Our Partners</h2>
+        <p data-aos="fade-up" data-aos-delay="100">We're proud to collaborate with these organizations to expand our impact.</p>
+        <div class="carousel-container" data-aos="fade-up" data-aos-delay="200">
+          <button class="carousel-btn left" aria-label="Previous partner">‹</button>
+          <div class="carousel-track" id="partnersCarousel">
+            <div class="carousel-item partner-logo"><img src="assests/Maranyundo+Logo+1.jpg" alt="Partner 1 Logo" /></div>
+            <div class="carousel-item partner-logo"><img src="assests/heptadev.PNG" alt="Partner 2 Logo" /></div>
+            <div class="carousel-item partner-logo"><img src="assests/kpc logo.png" alt="Partner 3 Logo" /></div>
+            <div class="carousel-item partner-logo"><img src="assests/idebate.png" alt="Partner 4 Logo" /></div>
+            <div class="carousel-item partner-logo"><img src="assests/alx l.jpg" alt="Partner 5 Logo" /></div>
+          </div>
+          <button class="carousel-btn right" aria-label="Next partner">›</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Column 1 -->
+      <div>
+        <h3>StudentInitiative</h3>
+        <p>Empowering students to live purposeful lives through mentorship, skills development, and comprehensive support.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="program.html">Our Programs</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <!-- Column 3 -->
+      <div>
+        <h4>Contact</h4>
+        <p>123 Learning St., Edutown<br />
+        <i class="fas fa-phone"></i> (123) 456-7890<br />
+        <i class="fas fa-envelope"></i> info@studentinitiative.org</p>
+      </div>
+      <!-- Column 4 -->
+      <div>
+        <h4>Newsletter</h4>
+        <p>Stay updated with our latest news and events.</p>
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+        <button class="btn primary full-width">Subscribe</button>
+      </div>
     </div>
-    <button class="carousel-btn right" onclick="scrollCarousel(1)">›</button>
-  </div>
-</section>
+    <div class="footer-bottom">
+      <p>&copy; 2025 StudentInitiative. All rights reserved.</p>
+    </div>
+  </footer>
 
-  </div>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="index.js"></script>
 </body>
-<footer class="footer">
-  <div class="footer-container">
-    <!-- About -->
-    <div class="footer-section">
-      <h3>StudentInitiative</h3>
-      <p>Empowering students with skills, resources, and mentorship to live purposeful lives in an inclusive community.</p>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" /></a>
-        <a href="#" aria-label="Twitter"><img src="twitter-icon.svg" alt="Twitter" /></a>
-        <a href="#" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" /></a>
-        <a href="#" aria-label="LinkedIn"><img src="linkedin-icon.svg" alt="LinkedIn" /></a>
-      </div>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/programs">Programs</a></li>
-        <li><a href="/get-involved">Get Involved</a></li>
-        <li><a href="/stories">Success Stories</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-section">
-      <h3>Contact Us</h3>
-      <ul>
-        <li><img src="map-pin.svg" alt="" /> 123 Education Street, Learning City, 12345</li>
-        <li><img src="phone.svg" alt="" /> (182)8928299</li>
-        <li><img src="mail.svg" alt="" /> info@studentinitiative.org</li>
-      </ul>
-    </div>
-
-    <!-- Newsletter -->
-    <div class="footer-section">
-      <h3>Stay Updated</h3>
-      <p>Subscribe to our newsletter for the latest updates and events.</p>
-      <input type="email" placeholder="Your email address" />
-      <a href="/get-involved?tab=donate">
-        <button>Subscribe</button>
-      </a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 StudentInitiative. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms of Service</a>
-      <a href="/accessibility">Accessibility</a>
-    </div>
-  </div>
-</footer>
-<script src="app.js"></script>
 </html>

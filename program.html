@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs - Student Initiative Rwanda</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="program.css" />
+  <!-- AOS Animation Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="/" class="logo">StudentInitiative</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="program.html" class="active">Programs</a>
+        <a href="getinvolved.html">Get Involved</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="donate">Donate</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu hidden">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="program.html" class="active">Programs</a>
+    <a href="getinvolved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="donate">Donate</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="programs-hero-section">
+      <div class="hero-shadow-overlay">
+        <div class="hero-content" data-aos="fade-up">
+          <h1>Our Programs</h1>
+          <p>Discover how we're empowering Rwandan students through mentorship, skills development, and comprehensive support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Tabs Section -->
+    <section class="programs-tabs-section">
+      <div class="container">
+        <div class="tabs-container">
+          <div class="tabs" data-aos="fade-up">
+            <button class="tab active" onclick="switchTab('tab-skills')">Skills Development</button>
+            <button class="tab" onclick="switchTab('tab-mentorship')">Mentorship</button>
+            <button class="tab" onclick="switchTab('tab-support')">Inclusive Support</button>
+            <button class="tab" onclick="switchTab('tab-events')">Events</button>
+          </div>
+
+          <!-- Skills Development Tab -->
+          <div id="tab-skills" class="tab-content active" data-aos="fade-up">
+            <div class="program-content">
+              <h3 class="program-title">Skills Development Program</h3>
+              <p class="program-description">Our Skills Development Program equips Rwandan students with practical, real-world skills that complement their academic education and prepare them for future careers.</p>
+
+              <div class="program-highlight">
+                <div class="program-info">
+                  <h4>Program Highlights</h4>
+                  <ul class="program-features">
+                    <li><i class="fas fa-check-circle"></i> Technology and digital literacy training</li>
+                    <li><i class="fas fa-check-circle"></i> Communication and presentation skills</li>
+                    <li><i class="fas fa-check-circle"></i> Leadership and teamwork development</li>
+                    <li><i class="fas fa-check-circle"></i> Critical thinking and problem-solving</li>
+                    <li><i class="fas fa-check-circle"></i> Financial literacy and entrepreneurship</li>
+                  </ul>
+                  <a href="#" class="btn btn-primary">Apply for Program</a>
+                </div>
+                <div class="program-image2">
+                  <img src="/assests/people-taking-part-business-event.jpg" alt="Skills Development Program">
+                </div>
+              </div>
+
+              <div class="program-cards">
+                <div class="program-card">
+                  <div class="program-icon">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <h3>Digital Skills</h3>
+                  <p>Students learn essential digital skills including basic programming, web development, and digital content creation.</p>
+                  <a href="#" class="tertiary">Learn More</a>
+                </div>
+
+                <div class="program-card">
+                  <div class="program-icon green-icon">
+                    <i class="fas fa-comments"></i>
+                  </div>
+                  <h3>Communication</h3>
+                  <p>Develop effective communication skills through workshops on public speaking, presentation, and professional writing.</p>
+                  <a href="#" class="tertiary">Learn More</a>
+                </div>
+
+                <div class="program-card">
+                  <div class="program-icon yellow-icon">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <h3>Problem Solving</h3>
+                  <p>Learn critical thinking and problem-solving methodologies through real-world challenges and case studies.</p>
+                  <a href="#" class="tertiary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentorship Tab -->
+          <div id="tab-mentorship" class="tab-content">
+            <div class="program-content">
+              <h3 class="program-title">Mentorship Program</h3>
+              <p class="program-description">Our Mentorship Program connects Rwandan students with experienced professionals who provide guidance, support, and insights from their industry experience.</p>
+
+              <div class="program-highlight">
+                <div class="program-image">
+                  <img src="/assests/college-students-different-ethnicities-cramming.jpg" alt="Mentorship Program">
+                </div>
+                <div class="program-info">
+                  <h4>Program Highlights</h4>
+                  <ul class="program-features">
+                    <li><i class="fas fa-check-circle"></i> One-on-one guidance from industry professionals</li>
+                    <li><i class="fas fa-check-circle"></i> Career path exploration and planning</li>
+                    <li><i class="fas fa-check-circle"></i> Networking opportunities with professionals</li>
+                    <li><i class="fas fa-check-circle"></i> Personal development and confidence building</li>
+                    <li><i class="fas fa-check-circle"></i> Academic and professional advice</li>
+                  </ul>
+                  <a href="#" class="btn btn-green">Become a Mentee</a>
+                </div>
+              </div>
+
+              <div class="program-cards">
+                <div class="program-card">
+                  <div class="program-icon">
+                    <i class="fas fa-user-tie"></i>
+                  </div>
+                  <h3>Career Guidance</h3>
+                  <p>Receive personalized career guidance and advice from professionals in your field of interest.</p>
+                  <a href="#" class="tertiary">Learn More</a>
+                </div>
+
+                <div class="program-card">
+                  <div class="program-icon green-icon">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <h3>Networking</h3>
+                  <p>Build professional connections and expand your network through mentorship relationships and events.</p>
+                  <a href="#" class="tertiary">Learn More</a>
+                </div>
+
+                <div class="program-card">
+                  <div class="program-icon yellow-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h3>Personal Growth</h3>
+                  <p>Develop confidence, resilience, and personal skills through regular mentorship sessions.</p>
+                  <a href="#" class="tertiary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inclusive Support Tab -->
+          <div id="tab-support" class="tab-content">
+            <div class="program-content">
+              <h3 class="program-title">Inclusive Support Program</h3>
+              <p class="program-description">Our Inclusive Support Program ensures that all Rwandan students, regardless of background or circumstances, have access to quality education and opportunities.</p>
+
+              <div class="program-highlight">
+                <div class="program-info">
+                  <h4>Program Highlights</h4>
+                  <ul class="program-features">
+                    <li><i class="fas fa-check-circle"></i> Support for students with disabilities</li>
+                    <li><i class="fas fa-check-circle"></i> Resources for young parents continuing education</li>
+                    <li><i class="fas fa-check-circle"></i> Assistance for first-generation college students</li>
+                    <li><i class="fas fa-check-circle"></i> Aid for students from low-income backgrounds</li>
+                    <li><i class="fas fa-check-circle"></i> Help for international and ESL students</li>
+                  </ul>
+                  <a href="#" class="btn btn-yellow">Request Support</a>
+                </div>
+                <div class="program-image-support">
+                  <img src="/assests/afro-american-woman-model-studio.jpg" alt="Support services for students">
+                </div>
+              </div>
+
+              <div class="program-cards">
+                <div class="program-card">
+                  <div class="program-icon">
+                    <i class="fas fa-universal-access"></i>
+                  </div>
+                  <h3>Accessibility</h3>
+                  <p>We provide accommodations and resources to ensure education is accessible to all students.</p>
+                  <a href="#" class="tertiary">Learn More</a>
+                </div>
+
+                <div class="program-card">
+                  <div class="program-icon green-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                  </div>
+                  <h3>Financial Aid</h3>
+                  <p>Financial assistance and scholarships for students from low-income backgrounds.</p>
+                  <a href="#" class="tertiary">Learn More</a>
+                </div>
+
+                <div class="program-card">
+                  <div class="program-icon yellow-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <h3>Community Support</h3>
+                  <p>Build connections with peers and mentors who understand your unique challenges.</p>
+                  <a href="#" class="tertiary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Events Tab -->
+          <div id="tab-events" class="tab-content">
+            <div class="program-content">
+              <h3 class="program-title">Upcoming Events</h3>
+              <p class="program-description">Join us for these upcoming events designed to enhance your skills, expand your network, and provide valuable learning experiences.</p>
+
+              <div class="events-grid">
+                <div class="event-card card-hover-effect">
+                  <div class="event-date">
+                    <div class="date-month">JUN</div>
+                    <div class="date-day">15</div>
+                  </div>
+                  <div class="event-content">
+                    <h4>Career Workshop</h4>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Main Campus, Kigali</p>
+                    <p class="event-time"><i class="fas fa-clock"></i> 9:00 AM - 4:00 PM</p>
+                    <p>A comprehensive workshop covering resume writing, interview skills, and job search strategies.</p>
+                    <a href="#" class="tertiary">Register Now</a>
+                  </div>
+                </div>
+
+                <div class="event-card card-hover-effect">
+                  <div class="event-date">
+                    <div class="date-month">JUL</div>
+                    <div class="date-day">3-5</div>
+                  </div>
+                  <div class="event-content">
+                    <h4>Coding Bootcamp</h4>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Tech Hub, Kigali</p>
+                    <p class="event-time"><i class="fas fa-clock"></i> 10:00 AM - 5:00 PM</p>
+                    <p>An intensive three-day bootcamp introducing students to programming fundamentals.</p>
+                    <a href="#" class="tertiary">Register Now</a>
+                  </div>
+                </div>
+
+                <div class="event-card card-hover-effect">
+                  <div class="event-date">
+                    <div class="date-month">JUL</div>
+                    <div class="date-day">20</div>
+                  </div>
+                  <div class="event-content">
+                    <h4>Community Meetup</h4>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Center Grounds, Kigali</p>
+                    <p class="event-time"><i class="fas fa-clock"></i> 5:00 PM - 8:00 PM</p>
+                    <p>Network with students, alumni, mentors, and industry professionals in a casual setting.</p>
+                    <a href="#" class="tertiary">Register Now</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-12 text-center">
+                <a href="#" class="btn btn-primary">View All Events</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="section-light success-stories-section">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <h2>Success Stories</h2>
+          <p class="section-subtitle">Hear from students who have benefited from our programs in Rwanda.</p>
+        </div>
+
+        <div class="stories-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="story-card card-hover-effect">
+            <div class="story-image">
+              <img src="assests/confident-good-looking-outgoing-nice-dark-skinned-curly-haired-female-friend-suggesting-visit-cozy-cafe-pointing-sideways-inviting-come-smiling-broadly-friendly-vibe-holding-hand-waist-casually.jpg" alt="Jean's Story">
+            </div>
+            <div class="story-content">
+              <h4>Lea's Journey</h4>
+              <p>"The skills development program taught me digital skills that were not part of my university curriculum. These skills helped me secure an internship at a tech company in Kigali."</p>
+              <a href="#" class="tertiary">Read Full Story</a>
+            </div>
+          </div>
+
+          <div class="story-card card-hover-effect">
+            <div class="story-image">
+              <img src="assests/afro-american-woman-model-studio.jpg" alt="Alice's Story">
+            </div>
+            <div class="story-content">
+              <h4>Alice's Achievement</h4>
+              <p>"As a first-generation college student, I faced many challenges. The inclusive support program provided me with resources and guidance that helped me succeed academically."</p>
+              <a href="#" class="tertiary">Read Full Story</a>
+            </div>
+          </div>
+
+          <div class="story-card card-hover-effect">
+            <div class="story-image">
+              <img src="assests/african-american-student-walking-park.jpg" alt="Patrick's Story">
+            </div>
+            <div class="story-content">
+              <h4>Patrick's Success</h4>
+              <p>"My mentor helped me navigate career choices and prepare for job interviews. Thanks to his guidance, I now work at a leading company in Rwanda and mentor other students."</p>
+              <a href="#" class="tertiary">Read Full Story</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-cta" data-aos="fade-up">
+      <div class="container cta-content">
+        <div>
+          <h2>Ready to Join Our Programs?</h2>
+          <p>Take the first step towards a brighter future with Student Initiative Rwanda.</p>
+        </div>
+        <div class="hero-actions">
+          <a href="getinvolved.html" class="btn primary">Apply Now</a>
+          <a href="contact.html" class="btn outline-light">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Column 1 -->
+      <div>
+        <h3>StudentInitiative</h3>
+        <p>Empowering students in Rwanda to live purposeful lives through mentorship, skills development, and comprehensive support.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="program.html">Our Programs</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <!-- Column 3 -->
+      <div>
+        <h4>Contact</h4>
+        <p>KG 123 St, Kigali, Rwanda<br />
+        <i class="fas fa-phone"></i> +250 788 123 456<br />
+        <i class="fas fa-envelope"></i> info@studentinitiative.org</p>
+      </div>
+      <!-- Column 4 -->
+      <div>
+        <h4>Newsletter</h4>
+        <p>Stay updated with our latest news and events.</p>
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+        <button class="btn primary full-width">Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 StudentInitiative Rwanda. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="index.js"></script>
+  <script src="program.js"></script>
+</body>
+</html>

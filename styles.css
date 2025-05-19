@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -183,8 +183,7 @@ body {
     }
   }
   .footer {
-    background-color: #1e3a8a; /* blue-900 */
-    color: white;
+    background-color: #1e3a8a;
     padding: 3rem 1rem;
     font-family: sans-serif;
   }
@@ -246,15 +245,15 @@ body {
   
   .footer-section button {
     width: 100%;
-    background-color: #facc15; /* yellow-500 */
-    color: #1e3a8a; /* blue-900 */
+    background-color: #facc15; 
+    color: #1e3a8a; 
     padding: 0.5rem;
     border: none;
     cursor: pointer;
   }
   
   .footer-section button:hover {
-    background-color: #eab308; /* yellow-600 */
+    background-color: #eab308; 
   }
   
   .social-icons a img {
@@ -287,7 +286,7 @@ body {
   .footer-links a:hover {
     color: white;
   }
- /* Base styling */
+ 
 body {
   margin: 0;
   font-family: sans-serif;
@@ -313,11 +312,11 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2563eb; /* blue-600 */
+  color: #2563eb; 
   text-decoration: none;
 }
 
-/* Desktop Nav */
+
 .nav {
   display: none;
   gap: 1rem;
@@ -354,7 +353,7 @@ body {
   background-color: #1d4ed8;
 }
 
-/* Mobile menu button */
+
 .menu-toggle {
   background: none;
   border: none;
@@ -366,7 +365,7 @@ body {
   height: 24px;
 }
 
-/* Mobile Nav */
+
 .mobile-nav {
   display: none;
   flex-direction: column;
@@ -392,7 +391,7 @@ body {
   text-align: center;
 }
 
-/* Responsive Design */
+
 @media (min-width: 768px) {
   .nav {
     display: flex;
@@ -426,12 +425,12 @@ body {
   transition: transform 0.5s ease;
   scroll-behavior: smooth;
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
 }
 
 .carousel-track::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none; 
 }
 
 .carousel-item {
@@ -475,4 +474,123 @@ body {
 .carousel-btn.right {
   right: 0;
 }
- 
+  */
+
+
+
+  /* ====== NAVBAR ====== */
+.navbar {
+  background: white;
+  padding: 1rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.7rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4285f4 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.logo:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Improved navbar links with hover effect */
+.nav-links a {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  position: relative;
+  padding: 0.5rem;
+  transition: 0.3s ease;
+}
+
+/* EXPLORE hover effect with orange circle and plus sign */
+.nav-links a .hover-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 40px;
+  height: 40px;
+  background-color: #f59e0b;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+}
+
+.nav-links a .hover-circle::before {
+  content: "+";
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+}
+
+.nav-links a:hover .hover-circle {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Special styling for donate button only */
+.donate {
+  background-color: #6366f1;
+  color: white !important;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem !important;
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.donate:hover {
+  background-color: #4f46e5;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #3b82f6;
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+  color: #1d4ed8;
+}

@@ -2,257 +2,371 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Student Initiative</title>
+  <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="contact.css" />
+  <!-- AOS Animation Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="header">
-    <div class="header-container">
-      <!-- Logo -->
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
       <a href="/" class="logo">StudentInitiative</a>
-  
-      <!-- Desktop Navigation -->
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="programs.html" class="nav-link">Programs</a>
-        <a href="getinvolved.html" class="nav-link">Get Involved</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="/get-involved?tab=donate" class="donate-btn">Donate</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="program.html">Programs</a>
+        <a href="getinvolved.html">Get Involved</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="donate.html" class="donate">Donate</a>
       </nav>
-  
-      <!-- Mobile Toggle -->
-      <button class="menu-toggle" onclick="toggleMenu()">
-        <img id="menu-icon" src="menu.svg" alt="Menu" />
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
       </button>
     </div>
-  
-    <!-- Mobile Navigation -->
-    <div id="mobileMenu" class="mobile-nav">
-      <a href="index.html" class="mobile-link">Home</a>
-      <a href="about.html" class="mobile-link">About Us</a>
-      <a href="programs.html" class="mobile-link">Programs</a>
-      <a href="getinvolved.html" class="mobile-link">Get Involved</a>
-      <a href="contact.html" class="mobile-link">Contact</a>
-      <a href="/get-involved?tab=donate" class="donate-btn full">Donate</a>
-    </div>
   </header>
-  <div class="contact-page">
 
+  <div class="mobile-menu hidden">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="program.html">Programs</a>
+    <a href="getinvolved.html">Get Involved</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="donate.html" class="donate">Donate</a>
+  </div>
+
+  <main>
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <h1>Contact Us</h1>
-        <p>Have questions or want to learn more about our programs? We're here to help.</p>
+    <section class="contact-hero-section">
+      <div class="hero-shadow-overlay">
+        <div class="hero-content" data-aos="fade-up">
+          <h1>Contact Us</h1>
+          <p>Have questions or want to learn more about our programs? We're here to help.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Contact Information -->
-    <section class="info">
-      <div class="container grid">
+    <!-- Contact Information Section -->
+    <section class="section-white contact-info-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left: Info Cards -->
+          <div class="contact-info" data-aos="fade-right">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtext">
+              We'd love to hear from you! Whether you have questions about our programs, want to get involved, or need support, our team is ready to assist you.
+            </p>
 
-        <!-- Left: Info Cards -->
-        <div class="left">
+            <div class="info-cards">
+              <div class="info-card card-hover-effect" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-inner">
+                  <div class="info-icon blue">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3>Our Location</h3>
+                    <p>123 Education Street</p>
+                    <p>Learning City, 12345</p>
+                  </div>
+                </div>
+              </div>
 
-          <h2>Get in Touch</h2>
-          <p>We'd love to hear from you! Whether you have questions about our programs, want to get involved, or need support, our team is ready to assist you.</p>
+              <div class="info-card card-hover-effect" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-inner">
+                  <div class="info-icon green">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3>Email Us</h3>
+                    <p>General Inquiries: <a href="mailto:info@studentinitiative.org">info@studentinitiative.org</a></p>
+                    <p>Support: <a href="mailto:support@studentinitiative.org">support@studentinitiative.org</a></p>
+                  </div>
+                </div>
+              </div>
 
-          <div class="info-cards">
+              <div class="info-card card-hover-effect" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-inner">
+                  <div class="info-icon yellow">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3>Call Us</h3>
+                    <p>Main Office: <a href="tel:+11234567890">(123) 456-7890</a></p>
+                    <p>Support Hotline: <a href="tel:+11234567891">(123) 456-7891</a></p>
+                  </div>
+                </div>
+              </div>
 
-            <div class="card">
-              <div class="icon blue"><span>📍</span></div>
-              <div>
-                <h3>Our Location</h3>
-                <p>123 Education Street</p>
-                <p>Learning City, 12345</p>
+              <div class="info-card card-hover-effect" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-inner">
+                  <div class="info-icon purple">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 10:00 AM - 2:00 PM (By appointment)</p>
+                    <p>Sunday: Closed</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="card">
-              <div class="icon green"><span>✉️</span></div>
-              <div>
-                <h3>Email Us</h3>
-                <p>General Inquiries: info@studentinitiative.org</p>
-                <p>Support: support@studentinitiative.org</p>
+            <div class="social-connect" data-aos="fade-up">
+              <h3>Connect With Us</h3>
+              <div class="social-icons">
+                <a href="https://facebook.com/" aria-label="Facebook" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/" aria-label="Twitter" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/" aria-label="Instagram" class="social-icon">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/" aria-label="LinkedIn" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
               </div>
             </div>
-
-            <div class="card">
-              <div class="icon yellow"><span>📞</span></div>
-              <div>
-                <h3>Call Us</h3>
-                <p>Main Office: (123) 456-7890</p>
-                <p>Support Hotline: (123) 456-7891</p>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="icon blue"><span>⏰</span></div>
-              <div>
-                <h3>Office Hours</h3>
-                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                <p>Saturday: 10:00 AM - 2:00 PM (By appointment)</p>
-                <p>Sunday: Closed</p>
-              </div>
-            </div>
-
           </div>
-        </div>
 
-        <!-- Right: Form -->
-        <div class="right">
-          <h2>Send Us a Message</h2>
-          <form>
-            <div class="row">
-              <div class="field">
-                <label>First Name</label>
-                <input type="text" placeholder="First Name" />
+          <!-- Right: Contact Form -->
+          <div class="contact-form-container" data-aos="fade-left">
+            <h2 class="section-title">Send Us a Message</h2>
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" placeholder="First Name" required />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" placeholder="Last Name" required />
+                </div>
               </div>
-              <div class="field">
-                <label>Last Name</label>
-                <input type="text" placeholder="Last Name" />
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email Address" required />
               </div>
-            </div>
 
-            <div class="field">
-              <label>Email</label>
-              <input type="email" placeholder="Email Address" />
-            </div>
+              <div class="form-group">
+                <label for="phone">Phone (Optional)</label>
+                <input type="tel" id="phone" placeholder="Phone Number" />
+              </div>
 
-            <div class="field">
-              <label>Phone (Optional)</label>
-              <input type="tel" placeholder="Phone Number" />
-            </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" required>
+                  <option value="">Select subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="programs">Programs Information</option>
+                  <option value="volunteer">Volunteering</option>
+                  <option value="donate">Donations</option>
+                  <option value="support">Support</option>
+                </select>
+              </div>
 
-            <div class="field">
-              <label>Subject</label>
-              <select>
-                <option>Select subject</option>
-                <option value="general">General Inquiry</option>
-                <option value="programs">Programs Information</option>
-                <option value="volunteer">Volunteering</option>
-                <option value="donate">Donations</option>
-                <option value="support">Support</option>
-              </select>
-            </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="How can we help you?" rows="5" required></textarea>
+              </div>
 
-            <div class="field">
-              <label>Message</label>
-              <textarea placeholder="How can we help you?"></textarea>
-            </div>
-
-            <button type="submit">Send Message ✉️</button>
-          </form>
+              <button type="submit" class="btn btn-primary">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Map Section -->
-    <section class="map">
+    <section class="section-light map-section">
       <div class="container text-center">
-        <h2>Find Us</h2>
-        <p>Visit our main office to learn more about our programs and services.</p>
-        <div class="map-placeholder">
-          <div>
-            <span class="icon">📍</span>
-            <p class="title">Interactive Map Would Be Here</p>
-            <p>123 Education Street, Learning City, 12345</p>
+        <h2 class="section-title centered" data-aos="fade-up">Find Us</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Visit our main office to learn more about our programs and services.
+        </p>
+        
+        <div class="map-container" data-aos="zoom-in" data-aos-delay="200">
+          <div class="map-overlay">
+            <div class="map-content">
+              <div class="map-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3>Our Location</h3>
+              <p>123 Education Street, Learning City, 12345</p>
+              <a href="https://maps.google.com" target="_blank" class="btn btn-outline">
+                <span>Get Directions</span>
+                <i class="fas fa-directions"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
+    <section class="section-white faq-section">
       <div class="container text-center">
-        <h2>Frequently Asked Questions</h2>
-        <p>Find quick answers to common questions about our programs and services.</p>
+        <h2 class="section-title centered" data-aos="fade-up">Frequently Asked Questions</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Find quick answers to common questions about our programs and services.
+        </p>
 
-        <div class="faq-list">
+        <div class="faq-container" data-aos="fade-up" data-aos-delay="200">
           <div class="faq-item">
-            <h3>How can I apply for your programs?</h3>
-            <p>You can apply for our programs through the Programs page on our website. Each program has specific application requirements and deadlines, which are detailed on the respective program pages.</p>
+            <div class="faq-question">
+              <h3>How can I apply for your programs?</h3>
+              <div class="faq-toggle">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                You can apply for our programs through the Programs page on our website. Each program has specific application requirements and deadlines, which are detailed on the respective program pages.
+              </p>
+            </div>
           </div>
+
           <div class="faq-item">
-            <h3>Are your programs free for students?</h3>
-            <p>Many of our core programs are free for eligible students. Some specialized programs may have nominal fees, but we offer scholarships and financial assistance to ensure that cost is not a barrier to participation.</p>
+            <div class="faq-question">
+              <h3>Are your programs free for students?</h3>
+              <div class="faq-toggle">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Many of our core programs are free for eligible students. Some specialized programs may have nominal fees, but we offer scholarships and financial assistance to ensure that cost is not a barrier to participation.
+              </p>
+            </div>
           </div>
+
           <div class="faq-item">
-            <h3>How can I support your initiative as a business?</h3>
-            <p>Businesses can support our initiative through corporate sponsorships, employee volunteer programs, in-kind donations, and more. Visit our Get Involved page or contact our partnership team for more information.</p>
+            <div class="faq-question">
+              <h3>How can I support your initiative as a business?</h3>
+              <div class="faq-toggle">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Businesses can support our initiative through corporate sponsorships, employee volunteer programs, in-kind donations, and more. Visit our Get Involved page or contact our partnership team for more information.
+              </p>
+            </div>
           </div>
+
           <div class="faq-item">
-            <h3>Do you offer accommodations for students with disabilities?</h3>
-            <p>Yes, we are committed to inclusivity and provide various accommodations for students with disabilities. Please contact our support team to discuss specific needs and how we can best support you.</p>
+            <div class="faq-question">
+              <h3>Do you offer accommodations for students with disabilities?</h3>
+              <div class="faq-toggle">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we are committed to inclusivity and provide various accommodations for students with disabilities. Please contact our support team to discuss specific needs and how we can best support you.
+              </p>
+            </div>
           </div>
+
           <div class="faq-item">
-            <h3>How can I become a mentor?</h3>
-            <p>To become a mentor, visit our Get Involved page and complete the mentor application form. Our team will review your application and contact you to discuss the next steps in the process.</p>
+            <div class="faq-question">
+              <h3>How can I become a mentor?</h3>
+              <div class="faq-toggle">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                To become a mentor, visit our Get Involved page and complete the mentor application form. Our team will review your application and contact you to discuss the next steps in the process.
+              </p>
+            </div>
           </div>
         </div>
 
-        <p class="footer-note">Don't see your question here? Contact us directly and we'll be happy to help.</p>
-        <button class="support-btn">Contact Support</button>
+        <div class="faq-footer" data-aos="fade-up" data-aos-delay="300">
+          <p>Don't see your question here? Contact us directly and we'll be happy to help.</p>
+          <a href="#contact-form" class="btn btn-primary scroll-to">
+            <span>Contact Support</span>
+            <i class="fas fa-headset"></i>
+          </a>
+        </div>
       </div>
     </section>
-  </div>
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- About -->
-      <div class="footer-section">
-        <h3>StudentInitiative</h3>
-        <p>Empowering students with skills, resources, and mentorship to live purposeful lives in an inclusive community.</p>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" /></a>
-          <a href="#" aria-label="Twitter"><img src="twitter-icon.svg" alt="Twitter" /></a>
-          <a href="#" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" /></a>
-          <a href="#" aria-label="LinkedIn"><img src="linkedin-icon.svg" alt="LinkedIn" /></a>
+
+    <!-- CTA Section -->
+    <section class="section-cta contact-cta-section" data-aos="zoom-in">
+      <div class="container cta-content">
+        <div>
+          <h2>Ready to Connect?</h2>
+          <p>Reach out today and let us know how we can help you or your organization.</p>
+        </div>
+        <div class="hero-actions">
+          <a href="#contact-form" class="btn primary scroll-to">Send a Message</a>
+          <a href="tel:+11234567890" class="btn outline-light">Call Us</a>
+          <a href="mailto:info@studentinitiative.org" class="btn outline-light">Email Us</a>
         </div>
       </div>
-  
-      <!-- Quick Links -->
-      <div class="footer-section">
-        <h3>Quick Links</h3>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Column 1 -->
+      <div>
+        <h3>StudentInitiative</h3>
+        <p>Empowering students to live purposeful lives through mentorship, skills development, and comprehensive support.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div>
+        <h4>Quick Links</h4>
         <ul>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/programs">Programs</a></li>
-          <li><a href="/get-involved">Get Involved</a></li>
-          <li><a href="/stories">Success Stories</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="program.html">Our Programs</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
+          <li><a href="faq.html">FAQ</a></li>
         </ul>
       </div>
-  
-      <!-- Contact -->
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><img src="map-pin.svg" alt="" /> 123 Education Street, Learning City, 12345</li>
-          <li><img src="phone.svg" alt="" /> (123) 456-7890</li>
-          <li><img src="mail.svg" alt="" /> info@studentinitiative.org</li>
-        </ul>
+      <!-- Column 3 -->
+      <div>
+        <h4>Contact</h4>
+        <p>123 Learning St., Edutown<br />
+        <i class="fas fa-phone"></i> (123) 456-7890<br />
+        <i class="fas fa-envelope"></i> info@studentinitiative.org</p>
       </div>
-  
-      <!-- Newsletter -->
-      <div class="footer-section">
-        <h3>Stay Updated</h3>
-        <p>Subscribe to our newsletter for the latest updates and events.</p>
-        <input type="email" placeholder="Your email address" />
-        <a href="/get-involved?tab=donate">
-          <button>Subscribe</button>
-        </a>
+      <!-- Column 4 -->
+      <div>
+        <h4>Newsletter</h4>
+        <p>Stay updated with our latest news and events.</p>
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+        <button class="btn primary full-width">Subscribe</button>
       </div>
     </div>
-  
     <div class="footer-bottom">
       <p>&copy; 2025 StudentInitiative. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-        <a href="/accessibility">Accessibility</a>
-      </div>
     </div>
-  </footer>  
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="index.js"></script>
+  <script src="contact.js"></script>
 </body>
-<script src="app.js"></script>
 </html>

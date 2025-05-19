@@ -2,513 +2,226 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Our Initiative</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    .section {
-      padding: 4rem 1rem;
-    }
-    .hero {
-      background-color: #2563eb;
-      color: white;
-      padding: 5rem 1rem;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 1.5rem;
-    }
-    .grid {
-      display: grid;
-      gap: 2rem;
-    }
-    .two-col {
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 768px) {
-      .two-col {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    .value-card,
-    .team-card,
-    .partner-logo {
-      background: white;
-      border: 1px solid #eee;
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      text-align: center;
-      transition: box-shadow 0.3s;
-    }
-    .value-card:hover,
-    .team-card:hover,
-    .partner-logo:hover {
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.375rem;
-      border: 2px solid #2563eb;
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn-primary {
-      background-color: #2563eb;
-      color: white;
-      border: none;
-    }
-    .team-img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-bottom: 1px solid #eee;
-    }
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
-      text-align: center;
-    }
-    .section-subtitle {
-      font-size: 1.25rem;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto 3rem;
-      text-align: center;
-    }
-    .partner-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (min-width: 768px) {
-      .partner-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    @media (min-width: 1024px) {
-      .partner-grid {
-        grid-template-columns: repeat(6, 1fr);
-      }
-    }
-    .footer {
-  background-color: #1e3a8a; /* blue-900 */
-  color: white;
-  padding: 3rem 1rem;
-  font-family: sans-serif;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-@media (min-width: 768px) {
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.footer-section h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.footer-section p {
-  margin-bottom: 1rem;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section li {
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: start;
-  gap: 0.5rem;
-}
-
-.footer-section input[type="email"] {
-  padding: 0.5rem;
-  border: 1px solid #1e40af;
-  background-color: #1e40af;
-  color: white;
-  width: 100%;
-  margin-bottom: 0.5rem;
-}
-
-.footer-section input::placeholder {
-  color: #93c5fd;
-}
-
-.footer-section button {
-  width: 100%;
-  background-color: #facc15; /* yellow-500 */
-  color: #1e3a8a; /* blue-900 */
-  padding: 0.5rem;
-  border: none;
-  cursor: pointer;
-}
-
-.footer-section button:hover {
-  background-color: #eab308; /* yellow-600 */
-}
-
-.social-icons a img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-.footer-bottom {
-  text-align: center;
-  color: #93c5fd;
-  margin-top: 2rem;
-  border-top: 1px solid #1e40af;
-  padding-top: 1rem;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-}
-
-.footer-links a {
-  color: #93c5fd;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: white;
-}
- /* Base styling */
-body {
-  margin: 0;
-  font-family: sans-serif;
-}
-
-.header {
-  background-color: white;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #2563eb; /* blue-600 */
-  text-decoration: none;
-}
-
-/* Desktop Nav */
-.nav {
-  display: none;
-  gap: 1rem;
-}
-
-.nav-link {
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
-  font-size: 0.875rem;
-  color: #374151;
-}
-
-.nav-link:hover {
-  background-color: #f9fafb;
-  color: #2563eb;
-}
-
-.nav-link.active {
-  background-color: #eff6ff;
-  color: #2563eb;
-}
-
-.donate-btn {
-  background-color: #2563eb;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  text-decoration: none;
-  margin-left: 1rem;
-}
-
-.donate-btn:hover {
-  background-color: #1d4ed8;
-}
-
-/* Mobile menu button */
-.menu-toggle {
-  background: none;
-  border: none;
-  display: block;
-}
-
-.menu-toggle img {
-  width: 24px;
-  height: 24px;
-}
-
-/* Mobile Nav */
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background-color: white;
-  border-top: 1px solid #e5e7eb;
-  padding: 1rem;
-}
-
-.mobile-link {
-  padding: 0.75rem;
-  text-decoration: none;
-  color: #374151;
-  border-radius: 0.375rem;
-}
-
-.mobile-link:hover {
-  background-color: #f9fafb;
-  color: #2563eb;
-}
-
-.full {
-  width: 100%;
-  text-align: center;
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-  .nav {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-
-  .mobile-nav {
-    display: none !important;
-  }
-}
- 
-  </style>
-  <header class="header">
-    <div class="header-container">
-      <!-- Logo -->
-      <a href="/" class="logo">StudentInitiative</a>
-  
-      <!-- Desktop Navigation -->
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="programs.html" class="nav-link">Programs</a>
-        <a href="getinvolved.html" class="nav-link">Get Involved</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="/get-involved?tab=donate" class="donate-btn">Donate</a>
-      </nav>
-  
-      <!-- Mobile Toggle -->
-      <button class="menu-toggle" onclick="toggleMenu()">
-        <img id="menu-icon" src="menu.svg" alt="Menu" />
-      </button>
-    </div>
-  
-    <!-- Mobile Navigation -->
-    <div id="mobileMenu" class="mobile-nav">
-      <a href="index.html" class="mobile-link">Home</a>
-      <a href="about.html" class="mobile-link">About Us</a>
-      <a href="programs.html" class="mobile-link">Programs</a>
-      <a href="getinvolved.html" class="mobile-link">Get Involved</a>
-      <a href="contact.html" class="mobile-link">Contact</a>
-      <a href="/get-involved?tab=donate" class="donate-btn full">Donate</a>
-    </div>
-  </header>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Our Initiative - Student Initiative</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="about.css" />
+  <!-- AOS Animation Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">About Our Initiative</h1>
-      <p style="font-size: 1.25rem;">Learn about our mission, vision, and the dedicated team working to empower students.</p>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="/" class="logo">StudentInitiative</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="program.html">Programs</a>
+        <a href="getinvolved.html">Get Involved</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="donate">Donate</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-  </section>
+  </header>
 
-  <!-- Mission & Vision -->
-  <section class="section" style="background-color: #ffffff;">
-    <div class="container grid two-col">
-      <div style="background-color: #eff6ff; border-radius: 0.5rem; padding: 2rem;">
-        <div class="icon">🎯</div>
-        <h2 style="font-size: 1.75rem; font-weight: bold;">Our Mission</h2>
-        <p>To empower students with the skills, resources, and mentorship they need to live purposeful lives and make positive contributions to society.</p>
-        <p>We believe in creating an inclusive environment where all students, regardless of background or circumstance, can thrive and reach their full potential.</p>
-      </div>
-      <div style="background-color: #ecfdf5; border-radius: 0.5rem; padding: 2rem;">
-        <div class="icon">🏆</div>
-        <h2 style="font-size: 1.75rem; font-weight: bold;">Our Vision</h2>
-        <p>A world where every student has access to quality education, supportive mentorship, and the resources they need to succeed.</p>
-        <p>We envision communities where students from all walks of life are equipped to overcome challenges and pursue their dreams with confidence.</p>
-      </div>
-    </div>
-  </section>
+  <div class="mobile-menu hidden">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="program.html">Programs</a>
+    <a href="getinvolved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="donate">Donate</a>
+  </div>
 
-  <!-- Core Values -->
-  <section class="section" style="background-color: #f9fafb;">
-    <div class="container">
-      <h2 class="section-title">Our Core Values</h2>
-      <p class="section-subtitle">These principles guide everything we do and help us create meaningful impact.</p>
-      <div class="grid two-col" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-        <div class="value-card">
-          <div class="icon">👥</div>
-          <h3>Inclusivity</h3>
-          <p>We create spaces where everyone feels welcome, valued, and supported regardless of background or ability.</p>
-        </div>
-        <div class="value-card">
-          <div class="icon">🏅</div>
-          <h3>Excellence</h3>
-          <p>We strive for the highest standards in all our programs and services to maximize student success.</p>
-        </div>
-        <div class="value-card">
-          <div class="icon">💚</div>
-          <h3>Compassion</h3>
-          <p>We approach our work with empathy, understanding the unique challenges each student faces.</p>
-        </div>
-        <div class="value-card">
-          <div class="icon">🎯</div>
-          <h3>Innovation</h3>
-          <p>We continuously seek new and better ways to serve our students and community.</p>
+  <main>
+    <!-- Hero Section -->
+    <section class="about-hero-section">
+      <div class="hero-shadow-overlay">
+        <div class="hero-content" data-aos="fade-up">
+          <h1>About Our Initiative</h1>
+          <p>Learn about our mission, vision, and the dedicated team working to empower students.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Our Team -->
-  <section class="section" style="background-color: #ffffff;">
-    <div class="container">
-      <h2 class="section-title">Meet Our Team</h2>
-      <p class="section-subtitle">Dedicated professionals committed to making a difference in students' lives.</p>
-      <div class="grid two-col" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-        <div class="team-card">
-          <img src="/placeholder.svg?height=300&width=300&text=EC" alt="Emily Chen" class="team-img" />
-          <h3>Dr. Emily Chen</h3>
-          <p style="color: #2563eb;">Executive Director</p>
-          <p>With over 15 years in education, Emily brings vision and leadership to our initiative.</p>
-        </div>
-        <div class="team-card">
-          <img src="/placeholder.svg?height=300&width=300&text=MJ" alt="Marcus Johnson" class="team-img" />
-          <h3>Marcus Johnson</h3>
-          <p style="color: #2563eb;">Program Director</p>
-          <p>Marcus oversees our educational programs and ensures they meet the highest standards.</p>
-        </div>
-        <div class="team-card">
-          <img src="/placeholder.svg?height=300&width=300&text=SR" alt="Sophia Rodriguez" class="team-img" />
-          <h3>Sophia Rodriguez</h3>
-          <p style="color: #2563eb;">Inclusion Specialist</p>
-          <p>Sophia ensures our programs are accessible and supportive for students with disabilities.</p>
-        </div>
-        <div class="team-card">
-          <img src="/placeholder.svg?height=300&width=300&text=DW" alt="David Williams" class="team-img" />
-          <h3>David Williams</h3>
-          <p style="color: #2563eb;">Community Outreach</p>
-          <p>David builds partnerships with local organizations to expand our impact.</p>
+    <!-- Mission & Vision -->
+    <section class="section-white mission-vision-section">
+      <div class="container">
+        <div class="mission-vision-grid" data-aos="fade-up">
+          <div class="mission-card">
+            <div class="mission-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h2>Our Mission</h2>
+            <p>To empower students with the skills, resources, and mentorship they need to live purposeful lives and make positive contributions to society.</p>
+            <p>We believe in creating an inclusive environment where all students, regardless of background or circumstance, can thrive and reach their full potential.</p>
+          </div>
+          <div class="vision-card">
+            <div class="vision-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h2>Our Vision</h2>
+            <p>A world where every student has access to quality education, supportive mentorship, and the resources they need to succeed.</p>
+            <p>We envision communities where students from all walks of life are equipped to overcome challenges and pursue their dreams with confidence.</p>
+          </div>
         </div>
       </div>
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="#" class="btn">View Full Team</a>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section-light values-section">
+      <div class="container text-center">
+        <h2 data-aos="fade-up">Our Core Values</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">These principles guide everything we do and help us create meaningful impact.</p>
+        <div class="values-grid" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-card card-hover-effect">
+            <div class="card-inner">
+              <div class="value-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>Inclusivity</h3>
+              <p>We create spaces where everyone feels welcome, valued, and supported regardless of background or ability.</p>
+            </div>
+          </div>
+          <div class="value-card card-hover-effect">
+            <div class="card-inner">
+              <div class="value-icon">
+                <i class="fas fa-medal"></i>
+              </div>
+              <h3>Excellence</h3>
+              <p>We strive for the highest standards in all our programs and services to maximize student success.</p>
+            </div>
+          </div>
+          <div class="value-card card-hover-effect">
+            <div class="card-inner">
+              <div class="value-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3>Compassion</h3>
+              <p>We approach our work with empathy, understanding the unique challenges each student faces.</p>
+            </div>
+          </div>
+          <div class="value-card card-hover-effect">
+            <div class="card-inner">
+              <div class="value-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3>Innovation</h3>
+              <p>We continuously seek new and better ways to serve our students and community.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Our Team -->
+    <section class="section-white team-section">
+      <div class="container text-center">
+        <h2 data-aos="fade-up">Meet Our Team</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Dedicated professionals committed to making a difference in students' lives.</p>
+        <div class="team-grid" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-card card-hover-effect">
+            <div class="card-inner">
+              <div class="team-img-container">
+                <img src="/assests/medium-shot-smiley-man-ready-travel.jpg" alt="Emily Chen" class="team-img" />
+              </div>
+              <h3>Dr. Kwizera David</h3>
+              <p class="team-role">Executive Director</p>
+              <p>With over 15 years in education, Emily brings vision and leadership to our initiative.</p>
+            </div>
+          </div>
+          <div class="team-card card-hover-effect">
+            <div class="card-inner">
+              <div class="team-img-container">
+                <img src="/assests/afro-american-woman-model-studio.jpg" alt="Marcus Johnson" class="team-img" />
+              </div>
+              <h3>Kelly Ineza</h3>
+              <p class="team-role">Program Director</p>
+              <p>Marcus oversees our educational programs and ensures they meet the highest standards.</p>
+            </div>
+          </div>
+          <div class="team-card card-hover-effect">
+            <div class="card-inner">
+              <div class="team-img-container">
+                <img src="/assests/confident-good-looking-outgoing-nice-dark-skinned-curly-haired-female-friend-suggesting-visit-cozy-cafe-pointing-sideways-inviting-come-smiling-broadly-friendly-vibe-holding-hand-waist-casually.jpg" alt="Sophia Rodriguez" class="team-img" />
+              </div>
+              <h3>Sophia Uwimana</h3>
+              <p class="team-role">Inclusion Specialist</p>
+              <p>Sophia ensures our programs are accessible and supportive for students with disabilities.</p>
+            </div>
+          </div>
+          <div class="team-card card-hover-effect">
+            <div class="card-inner">
+              <div class="team-img-container">
+                <img src="/assests/african-american-student-walking-park.jpg" alt="David Williams" class="team-img" />
+              </div>
+              <h3>David Imena</h3>
+              <p class="team-role">Community Outreach</p>
+              <p>David builds partnerships with local organizations to expand our impact.</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-cta" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="btn btn-blue">View Full Team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-container">
-      <!-- About -->
-      <div class="footer-section">
+    <div class="container footer-grid">
+      <!-- Column 1 -->
+      <div>
         <h3>StudentInitiative</h3>
-        <p>Empowering students with skills, resources, and mentorship to live purposeful lives in an inclusive community.</p>
+        <p>Empowering students to live purposeful lives through mentorship, skills development, and comprehensive support.</p>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" /></a>
-          <a href="#" aria-label="Twitter"><img src="twitter-icon.svg" alt="Twitter" /></a>
-          <a href="#" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" /></a>
-          <a href="#" aria-label="LinkedIn"><img src="linkedin-icon.svg" alt="LinkedIn" /></a>
+          <a href="https://facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-  
-      <!-- Quick Links -->
-      <div class="footer-section">
-        <h3>Quick Links</h3>
+      <!-- Column 2 -->
+      <div>
+        <h4>Quick Links</h4>
         <ul>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/programs">Programs</a></li>
-          <li><a href="/get-involved">Get Involved</a></li>
-          <li><a href="/stories">Success Stories</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="program.html">Our Programs</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
+          <li><a href="faq.html">FAQ</a></li>
         </ul>
       </div>
-  
-      <!-- Contact -->
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><img src="map-pin.svg" alt="" /> 123 Education Street, Learning City, 12345</li>
-          <li><img src="phone.svg" alt="" /> (123) 456-7890</li>
-          <li><img src="mail.svg" alt="" /> info@studentinitiative.org</li>
-        </ul>
+      <!-- Column 3 -->
+      <div>
+        <h4>Contact</h4>
+        <p>123 Learning St., Edutown<br />
+        <i class="fas fa-phone"></i> (123) 456-7890<br />
+        <i class="fas fa-envelope"></i> info@studentinitiative.org</p>
       </div>
-  
-      <!-- Newsletter -->
-      <div class="footer-section">
-        <h3>Stay Updated</h3>
-        <p>Subscribe to our newsletter for the latest updates and events.</p>
-        <input type="email" placeholder="Your email address" />
-        <a href="/get-involved?tab=donate">
-          <button>Subscribe</button>
-        </a>
+      <!-- Column 4 -->
+      <div>
+        <h4>Newsletter</h4>
+        <p>Stay updated with our latest news and events.</p>
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+        <button class="btn primary full-width">Subscribe</button>
       </div>
     </div>
-  
     <div class="footer-bottom">
       <p>&copy; 2025 StudentInitiative. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-        <a href="/accessibility">Accessibility</a>
-      </div>
     </div>
-  </footer>  
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="index.js"></script>
+  <script src="about.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
